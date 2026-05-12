@@ -72,6 +72,21 @@ function unitChip(u) {
   return `<span class="chip ${ycls(u.year)}${d} chip-link" title="${u.title}" onclick="showUnitDetail('${u.code}')">${u.code}</span>`;
 }
 
+function unitInfoGrid(u) {
+  const fieldMap = { MH: 'Mental Health', CYP: 'Children & Young People' };
+  const fieldsText = (u.fields || []).map(f => fieldMap[f] || f).join(' · ');
+  const discoveryItem = u.discovery
+    ? `<div class="unit-info-item"><span class="unit-info-label">Type</span><span class="unit-info-value unit-info-discovery">Discovery unit</span></div>`
+    : '';
+  return `<div class="unit-info-grid">
+    <div class="unit-info-item"><span class="unit-info-label">Year of study</span><span class="unit-info-value">Year ${u.year}</span></div>
+    <div class="unit-info-item"><span class="unit-info-label">FHEQ level</span><span class="unit-info-value">Level ${u.level}</span></div>
+    <div class="unit-info-item"><span class="unit-info-label">Credits</span><span class="unit-info-value">${u.credits}</span></div>
+    <div class="unit-info-item"><span class="unit-info-label">Fields</span><span class="unit-info-value">${fieldsText}</span></div>
+    ${discoveryItem}
+  </div>`;
+}
+
 /* ── Render dispatcher ────────────────────────────────── */
 function render() {
   const c = document.getElementById('content');
@@ -196,7 +211,6 @@ function renderUnits(c, fu) {
     if (!yUnits.length) return;
     html += `<div class="section-hd">Year ${yr} – Level ${yr + 3}</div>`;
     yUnits.forEach(u => {
-      const fieldTags = (u.fields || []).map(f => `<span class="meta-tag">${f}</span>`).join('');
       const assessText = (u.assessments || []).map(a =>
         `${a.type}${a.length ? ' — ' + a.length : ''}`).join(' &amp; ');
 
@@ -204,19 +218,13 @@ function renderUnits(c, fu) {
         <div class="unit-card-hd">
           <div class="unit-code">${u.code}</div>
           <div class="unit-title">${u.title}</div>
-          <div class="unit-meta">
-            <span class="meta-tag year">Year ${u.year} · L${u.level}</span>
-            <span class="meta-tag">${u.credits}cr</span>
-            ${fieldTags}
-            ${u.discovery ? '<span class="meta-tag disc">Discovery</span>' : ''}
-            ${u.note ? '<span class="meta-tag note">Note</span>' : ''}
-          </div>
+          ${unitInfoGrid(u)}
         </div>
         <div class="unit-card-body">
           ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
           ${u.outcomes.map(o => {
-            const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref">${n}</span>`).join('');
-            const poRefs  = (o.po  || []).map(p => `<span class="po-ref">${p}</span>`).join('');
+            const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
+            const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
             return `<div class="outcome-item">
               <div class="outcome-cat">${o.category}</div>
               <div class="outcome-text">${o.text}</div>
@@ -307,7 +315,6 @@ function renderUnitDetail(c) {
   };
   const backLabel = backLabels[previousView] || 'Back';
 
-  const fieldTags = (u.fields || []).map(f => `<span class="meta-tag">${f}</span>`).join('');
   const assessText = (u.assessments || []).map(a =>
     `${a.type}${a.length ? ' — ' + a.length : ''}`).join(' &amp; ');
 
@@ -318,13 +325,7 @@ function renderUnitDetail(c) {
     <div class="unit-card-hd">
       <div class="unit-code">${u.code}</div>
       <div class="unit-title">${u.title}</div>
-      <div class="unit-meta">
-        <span class="meta-tag year">Year ${u.year} · L${u.level}</span>
-        <span class="meta-tag">${u.credits}cr</span>
-        ${fieldTags}
-        ${u.discovery ? '<span class="meta-tag disc">Discovery</span>' : ''}
-        ${u.note ? '<span class="meta-tag note">Note</span>' : ''}
-      </div>
+      ${unitInfoGrid(u)}
     </div>
     <div class="unit-card-body">
       ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
