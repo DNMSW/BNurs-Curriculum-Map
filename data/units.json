@@ -203,7 +203,7 @@
     "year": 2,
     "level": 5,
     "credits": 10,
-    "fields": ["Adult", "MH", "CYP"],
+    "fields": ["Adult"],
     "discovery": true,
     "assessments": [{"type": "Written assignment", "length": "2000 words", "summative": true, "weight": 100}],
     "outcomes": [
