@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BNurs Curriculum Mapping – University of Manchester</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div>
+      <h1>BNurs Curriculum Mapping</h1>
+      <p class="subtitle">University of Manchester &middot; School of Health Sciences &middot; NMC Future Nurse (2018)</p>
+    </div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="filter-group">
+    <label>Year of Study</label>
+    <div class="btn-group">
+      <button class="filter-btn active" data-filter="year" data-value="all">All Years</button>
+      <button class="filter-btn" data-filter="year" data-value="1">Year 1</button>
+      <button class="filter-btn" data-filter="year" data-value="2">Year 2</button>
+      <button class="filter-btn" data-filter="year" data-value="3">Year 3</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <label>Field of Practice</label>
+    <div class="btn-group">
+      <button class="filter-btn active" data-filter="field" data-value="all">All Fields</button>
+      <button class="filter-btn" data-filter="field" data-value="Adult">Adult</button>
+      <button class="filter-btn" data-filter="field" data-value="MH">Mental Health</button>
+      <button class="filter-btn" data-filter="field" data-value="CYP">CYP</button>
+    </div>
+  </div>
+  <div class="filter-group filter-group--search">
+    <label>Search</label>
+    <input type="text" id="search" placeholder="Keyword, unit code or NMC ref (e.g. 4.5)…" autocomplete="off" />
+  </div>
+</div>
+
+<nav class="main-nav">
+  <button class="nav-btn active" data-view="nmc" onclick="setView('nmc', this)">NMC Standards</button>
+  <button class="nav-btn" data-view="programme" onclick="setView('programme', this)">Programme Outcomes</button>
+  <button class="nav-btn" data-view="units" onclick="setView('units', this)">Units Overview</button>
+  <button class="nav-btn" data-view="gaps" onclick="setView('gaps', this)">Coverage Gaps</button>
+  <button class="nav-btn export-btn" onclick="exportCSV()">&#8659; Export CSV</button>
+</nav>
+
+<main id="content">
+  <div class="loading">Loading curriculum data…</div>
+</main>
+
+<script src="app.js"></script>
+<script src="csv.js"></script>
+</body>
+</html>
