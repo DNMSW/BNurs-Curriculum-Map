@@ -329,8 +329,8 @@ function renderUnitDetail(c) {
     <div class="unit-card-body">
       ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
       ${u.outcomes.map(o => {
-        const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref">${n}</span>`).join('');
-        const poRefs  = (o.po  || []).map(p => `<span class="po-ref">${p}</span>`).join('');
+        const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
+        const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
         return `<div class="outcome-item">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}</div>
@@ -344,6 +344,44 @@ function renderUnitDetail(c) {
 
   c.innerHTML = html;
 }
+
+/* ── Reference popup ──────────────────────────────────── */
+function showRefPopup(id, type) {
+  const body = document.getElementById('ref-modal-body');
+  let item, subtitle, labelClass;
+
+  if (type === 'nmc') {
+    item = nmc.find(s => s.id === id);
+    if (!item) return;
+    const pNum = typeof item.platform === 'number';
+    subtitle = pNum
+      ? `Platform ${item.platform}: ${item.platformTitle}`
+      : item.platformTitle;
+    labelClass = 'popup-label-nmc';
+  } else {
+    item = programme.find(p => p.id === id);
+    if (!item) return;
+    subtitle = `Category ${item.category}: ${item.categoryTitle}`;
+    labelClass = 'popup-label-po';
+  }
+
+  body.innerHTML = `
+    <div class="popup-label ${labelClass}">${type === 'nmc' ? 'NMC Standard' : 'Programme Outcome'}</div>
+    <div class="popup-id">${item.id}</div>
+    <div class="popup-subtitle">${subtitle}</div>
+    <div class="popup-text">${item.text}</div>`;
+
+  document.getElementById('ref-modal').classList.add('active');
+}
+
+function closeRefPopup(e) {
+  if (e && e.target !== document.getElementById('ref-modal')) return;
+  document.getElementById('ref-modal').classList.remove('active');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('ref-modal').classList.remove('active');
+});
 
 /* ── Filter event wiring ──────────────────────────────── */
 document.querySelectorAll('.filter-btn').forEach(btn => {
