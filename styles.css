@@ -188,6 +188,8 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
   white-space: nowrap;
   cursor: default;
 }
+.chip.chip-link { cursor: pointer; }
+.chip.chip-link:hover { opacity: 0.75; text-decoration: underline; }
 .chip.y1 { background: #e3f0fb; color: #154e78; border: 1px solid #9dcaf0; }
 .chip.y2 { background: #e3f7ec; color: #1a6e3d; border: 1px solid #8dd4aa; }
 .chip.y3 { background: #fdecd8; color: #783d12; border: 1px solid #f4b97b; }
@@ -265,6 +267,21 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
   font-size: 0.82rem;
 }
 .assessment-block strong { color: var(--purple); }
+
+/* ── Unit detail nav ──────────────────────────────────── */
+.unit-detail-nav { margin-bottom: 1rem; }
+.back-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  font-family: var(--font);
+  color: var(--purple);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.back-btn:hover { background: var(--purple-bg); border-color: var(--purple-lt); }
 
 /* ── Empty state ──────────────────────────────────────── */
 .empty { text-align: center; padding: 3rem 1rem; color: var(--muted); }

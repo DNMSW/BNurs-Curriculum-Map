@@ -1,5 +1,7 @@
 let nmc = [], units = [], programme = [];
 let currentView = 'nmc';
+let previousView = null;
+let selectedUnit = null;
 let filters = { year: 'all', field: 'all', search: '' };
 
 async function loadData() {
@@ -17,9 +19,29 @@ async function loadData() {
 }
 
 function setView(v, btn) {
+  previousView = null;
+  selectedUnit = null;
   currentView = v;
   document.querySelectorAll('.nav-btn[data-view]').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
+  render();
+}
+
+function showUnitDetail(code) {
+  previousView = currentView;
+  selectedUnit = code;
+  currentView = 'unit-detail';
+  document.querySelectorAll('.nav-btn[data-view]').forEach(b => b.classList.remove('active'));
+  render();
+}
+
+function goBack() {
+  currentView = previousView || 'nmc';
+  previousView = null;
+  selectedUnit = null;
+  document.querySelectorAll('.nav-btn[data-view]').forEach(b => {
+    if (b.dataset.view === currentView) b.classList.add('active');
+  });
   render();
 }
 
@@ -47,17 +69,18 @@ function ycls(year) { return ['', 'y1', 'y2', 'y3'][year] || ''; }
 
 function unitChip(u) {
   const d = u.discovery ? ' discovery' : '';
-  return `<span class="chip ${ycls(u.year)}${d}" title="${u.title}">${u.code}</span>`;
+  return `<span class="chip ${ycls(u.year)}${d} chip-link" title="${u.title}" onclick="showUnitDetail('${u.code}')">${u.code}</span>`;
 }
 
 /* ── Render dispatcher ────────────────────────────────── */
 function render() {
   const c = document.getElementById('content');
   const fu = getFilteredUnits();
-  if      (currentView === 'nmc')       renderNMC(c, fu);
-  else if (currentView === 'programme') renderProgramme(c, fu);
-  else if (currentView === 'units')     renderUnits(c, fu);
-  else if (currentView === 'gaps')      renderGaps(c, fu);
+  if      (currentView === 'nmc')         renderNMC(c, fu);
+  else if (currentView === 'programme')   renderProgramme(c, fu);
+  else if (currentView === 'units')       renderUnits(c, fu);
+  else if (currentView === 'gaps')        renderGaps(c, fu);
+  else if (currentView === 'unit-detail') renderUnitDetail(c);
 }
 
 /* ── NMC Standards view ───────────────────────────────── */
@@ -269,6 +292,55 @@ function renderGaps(c, fu) {
       });
     }
   }
+
+  c.innerHTML = html;
+}
+
+/* ── Unit Detail view ─────────────────────────────────── */
+function renderUnitDetail(c) {
+  const u = units.find(x => x.code === selectedUnit);
+  if (!u) { c.innerHTML = '<div class="empty"><p>Unit not found.</p></div>'; return; }
+
+  const backLabels = {
+    nmc: 'NMC Standards', programme: 'Programme Outcomes',
+    units: 'Units Overview', gaps: 'Coverage Gaps'
+  };
+  const backLabel = backLabels[previousView] || 'Back';
+
+  const fieldTags = (u.fields || []).map(f => `<span class="meta-tag">${f}</span>`).join('');
+  const assessText = (u.assessments || []).map(a =>
+    `${a.type}${a.length ? ' — ' + a.length : ''}`).join(' &amp; ');
+
+  let html = `<div class="unit-detail-nav">
+    <button class="back-btn" onclick="goBack()">&#8592; ${backLabel}</button>
+  </div>
+  <div class="unit-card">
+    <div class="unit-card-hd">
+      <div class="unit-code">${u.code}</div>
+      <div class="unit-title">${u.title}</div>
+      <div class="unit-meta">
+        <span class="meta-tag year">Year ${u.year} · L${u.level}</span>
+        <span class="meta-tag">${u.credits}cr</span>
+        ${fieldTags}
+        ${u.discovery ? '<span class="meta-tag disc">Discovery</span>' : ''}
+        ${u.note ? '<span class="meta-tag note">Note</span>' : ''}
+      </div>
+    </div>
+    <div class="unit-card-body">
+      ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
+      ${u.outcomes.map(o => {
+        const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref">${n}</span>`).join('');
+        const poRefs  = (o.po  || []).map(p => `<span class="po-ref">${p}</span>`).join('');
+        return `<div class="outcome-item">
+          <div class="outcome-cat">${o.category}</div>
+          <div class="outcome-text">${o.text}</div>
+          ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
+          ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
+        </div>`;
+      }).join('')}
+      <div class="assessment-block"><strong>Assessment:</strong> ${assessText || 'See unit specification'}</div>
+    </div>
+  </div>`;
 
   c.innerHTML = html;
 }
