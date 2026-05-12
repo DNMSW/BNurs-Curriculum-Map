@@ -31,7 +31,7 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
 .filter-bar {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 0.7rem 2rem;
+  padding: 0.75rem 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
@@ -50,6 +50,12 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
   color: var(--muted);
   white-space: nowrap;
 }
+/* ── Year of Study label enlarged ────────────────────── */
+.filter-group:first-child label {
+  font-size: 0.85rem;
+  color: var(--purple);
+  letter-spacing: 0.04em;
+}
 .filter-group--search { margin-left: auto; }
 .btn-group { display: flex; gap: 0.2rem; }
 .filter-btn {
@@ -65,6 +71,27 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
 }
 .filter-btn:hover { border-color: var(--purple-lt); color: var(--purple); }
 .filter-btn.active { background: var(--purple); border-color: var(--purple); color: #fff; }
+/* ── Year of Study buttons: larger, purple bg, white text */
+.filter-btn[data-filter="year"] {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+  padding: 0.45rem 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 20px;
+}
+.filter-btn[data-filter="year"]:hover {
+  background: var(--purple-lt);
+  border-color: var(--purple-lt);
+  color: #fff;
+}
+.filter-btn[data-filter="year"].active {
+  background: var(--purple-dk);
+  border-color: var(--purple-dk);
+  color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.25);
+}
 #search {
   padding: 0.32rem 0.75rem;
   border: 1px solid var(--border);
@@ -78,28 +105,50 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
 /* ── Nav ──────────────────────────────────────────────── */
 .main-nav {
   background: var(--purple-dk);
-  padding: 0 2rem;
+  padding: 0.65rem 1.5rem;
   display: flex;
   align-items: center;
+  gap: 0.4rem;
   overflow-x: auto;
 }
 .nav-btn {
-  background: none;
+  background: #fff;
   border: none;
-  color: rgba(255,255,255,0.65);
+  color: var(--purple);
   font-family: var(--font);
   font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.85rem 1.15rem;
+  font-weight: 700;
+  padding: 0.55rem 1.35rem;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: all 0.12s;
+  border-radius: 50px;
   white-space: nowrap;
+  letter-spacing: 0.01em;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.28), 0 6px 4px rgba(0,0,0,0.15);
+  transform: translateY(0);
+  transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
 }
-.nav-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
-.nav-btn.active { color: #fff; border-bottom-color: var(--gold); }
-.nav-btn.export-btn { margin-left: auto; color: var(--gold); font-weight: 600; }
-.nav-btn.export-btn:hover { background: rgba(232,192,74,0.1); }
+.nav-btn:hover {
+  background: #f5eef8;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.28), 0 4px 3px rgba(0,0,0,0.12);
+}
+.nav-btn.active {
+  background: var(--gold);
+  color: var(--purple-dk);
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+.nav-btn.export-btn {
+  margin-left: auto;
+  background: var(--gold);
+  color: var(--purple-dk);
+  box-shadow: 0 5px 0 rgba(0,0,0,0.28), 0 6px 4px rgba(0,0,0,0.15);
+}
+.nav-btn.export-btn:hover {
+  background: #f0cc5a;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 rgba(0,0,0,0.28), 0 4px 3px rgba(0,0,0,0.12);
+}
 
 /* ── Main content ─────────────────────────────────────── */
 main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
@@ -370,7 +419,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
 /* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 800px) {
   header, .filter-bar, main { padding-left: 1rem; padding-right: 1rem; }
-  .main-nav { padding: 0 1rem; }
+  .main-nav { padding: 0.5rem 1rem; }
   #search { width: 200px; }
   .filter-group--search { margin-left: 0; }
   .stats-bar { gap: 0.5rem; }
