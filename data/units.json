@@ -14,7 +14,7 @@
     "assessments": [
       {
         "type": "Collaborative presentation",
-        "length": "15–18 mins",
+        "length": "15\u201318 mins",
         "summative": true,
         "weight": 100
       }
@@ -274,7 +274,7 @@
       "CYP"
     ],
     "discovery": false,
-    "note": "Unit specification PDF was not accessible – outcomes and NMC mappings are indicative based on unit title and programme context",
+    "note": "Unit specification PDF was not accessible \u2013 outcomes and NMC mappings are indicative based on unit title and programme context",
     "assessments": [
       {
         "type": "Assessment details not available",
@@ -464,7 +464,13 @@
         "type": "Essay",
         "length": "2000 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1953,7 +1959,13 @@
         "type": "Observed teaching session and critical reflection",
         "length": "2500 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -2530,7 +2542,13 @@
         "type": "Written assignment (reflective with personal development plan)",
         "length": "2500 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
