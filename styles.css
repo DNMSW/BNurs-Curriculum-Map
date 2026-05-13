@@ -22,8 +22,9 @@
 body { font-family: var(--font); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.55; }
 
 /* ── Header ───────────────────────────────────────────── */
-header { background: var(--purple); color: #fff; padding: 1.1rem 2rem; }
-.header-inner { max-width: 1280px; margin: 0 auto; }
+header { background: var(--purple); color: #fff; padding: 1rem 2rem; }
+.header-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 1.25rem; }
+.uom-logo { height: 60px; width: auto; flex-shrink: 0; }
 header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
 .subtitle { font-size: 0.8rem; opacity: 0.7; margin-top: 0.2rem; }
 
@@ -31,30 +32,39 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
 .filter-bar {
   background: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 0.75rem 2rem;
+  padding: 0.7rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 0.8rem;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
-.filter-group { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-.filter-group label {
-  font-size: 0.7rem;
+.search-by-label {
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.12em;
   color: var(--muted);
   white-space: nowrap;
 }
-/* ── Year of Study label enlarged ────────────────────── */
-.filter-group:not(.filter-group--search) label {
+.filter-divider {
+  display: inline-block;
+  width: 1px;
+  height: 34px;
+  background: var(--border);
+  flex-shrink: 0;
+  align-self: center;
+}
+.filter-group { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.filter-group label {
   font-size: 0.85rem;
+  font-weight: 700;
   color: var(--purple);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 .filter-group--search { margin-left: auto; }
 .btn-group { display: flex; gap: 0.2rem; }
@@ -71,7 +81,7 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
 }
 .filter-btn:hover { border-color: var(--purple-lt); color: var(--purple); }
 .filter-btn.active { background: var(--purple); border-color: var(--purple); color: #fff; }
-/* ── Year of Study buttons: larger, purple bg, white text */
+/* ── Year of Study buttons: purple bg, white text ─────── */
 .filter-btn[data-filter="year"] {
   background: var(--purple);
   color: #fff;
@@ -79,7 +89,6 @@ header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
   padding: 0.45rem 1.1rem;
   font-size: 0.88rem;
   font-weight: 700;
-  border-radius: 20px;
 }
 .filter-btn[data-filter="year"]:hover {
   background: var(--purple-lt);
@@ -414,6 +423,124 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--text);
+}
+
+/* ── Nav extras ───────────────────────────────────────── */
+.nav-spacer { flex: 1; }
+.nav-btn-logo { height: 18px; width: auto; vertical-align: middle; margin-right: 0.35rem; }
+.nav-btn-gaps {
+  color: var(--red);
+  border: 3px solid var(--red);
+  box-shadow: 0 5px 0 rgba(176,0,32,0.4), 0 6px 4px rgba(0,0,0,0.12);
+}
+.nav-btn-gaps:hover {
+  background: var(--red-bg);
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 rgba(176,0,32,0.4), 0 4px 3px rgba(0,0,0,0.1);
+}
+.nav-btn-gaps.active {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 rgba(176,0,32,0.3);
+}
+
+/* ── Assessment map ───────────────────────────────────── */
+.stat.assessed { border-left: 4px solid var(--gold); }
+.stat.assessed .stat-num { color: #7a5200; }
+
+.assess-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+  padding: 0.55rem 0.9rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.assess-method-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.assess-method-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.assess-method-text { font-size: 0.875rem; font-weight: 600; }
+.assess-weight-badge {
+  background: var(--purple);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.12rem 0.45rem;
+  border-radius: 20px;
+}
+.lo-count-chip {
+  background: #fffbf0;
+  color: #7a5200;
+  border: 1px solid var(--gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.12rem 0.45rem;
+  border-radius: 20px;
+}
+
+.assessed-outcome {
+  background: var(--green-bg);
+  border-left: 3px solid var(--green);
+  padding-left: 0.55rem;
+}
+.taught-outcome {
+  border-left: 3px solid var(--border);
+  padding-left: 0.55rem;
+  opacity: 0.78;
+}
+
+.outcome-status-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.08rem 0.4rem;
+  border-radius: 20px;
+  vertical-align: middle;
+  margin-left: 0.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.assessed-tag { background: #d4edda; color: #155724; }
+.taught-tag { background: var(--bg); color: var(--muted); border: 1px solid var(--border); }
+
+.assessed-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+  padding: 0.28rem 0.6rem;
+  background: #fffbf0;
+  border-radius: 4px;
+  border: 1px dashed var(--gold);
+}
+.assessed-row-label {
+  font-size: 0.63rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7a5200;
+  white-space: nowrap;
+  margin-right: 0.15rem;
 }
 
 /* ── Responsive ───────────────────────────────────────── */

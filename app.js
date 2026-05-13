@@ -95,47 +95,63 @@ function render() {
   else if (currentView === 'programme')   renderProgramme(c, fu);
   else if (currentView === 'units')       renderUnits(c, fu);
   else if (currentView === 'gaps')        renderGaps(c, fu);
+  else if (currentView === 'assessments') renderAssessments(c, fu);
   else if (currentView === 'unit-detail') renderUnitDetail(c);
 }
 
 /* ── NMC Standards view ───────────────────────────────── */
 function renderNMC(c, fu) {
-  // build coverage map
   const cov = {};
   fu.forEach(u => u.outcomes.forEach(o => (o.nmc || []).forEach(ref => {
     if (!cov[ref]) cov[ref] = [];
     if (!cov[ref].find(x => x.code === u.code)) cov[ref].push(u);
   })));
 
+  const assessedCov = {};
+  fu.forEach(u => {
+    const idx = new Set();
+    (u.assessments || []).forEach(a => (a.assesses_outcomes || []).forEach(i => idx.add(i)));
+    u.outcomes.forEach((o, i) => {
+      if (!idx.has(i)) return;
+      (o.nmc || []).forEach(ref => {
+        if (!assessedCov[ref]) assessedCov[ref] = [];
+        if (!assessedCov[ref].find(x => x.code === u.code)) assessedCov[ref].push(u);
+      });
+    });
+  });
+
   const mainStds = nmc.filter(s => typeof s.platform === 'number');
   const annexStds = nmc.filter(s => s.platform === 'Annexe');
   const covered = mainStds.filter(s => cov[s.id]?.length).length +
                   annexStds.filter(s => cov[s.id]?.length).length;
   const total = nmc.length;
+  const assessedCount = [...mainStds, ...annexStds].filter(s => assessedCov[s.id]?.length).length;
 
   let html = `<div class="stats-bar">
     <div class="stat"><div class="stat-num">${total}</div><div class="stat-label">NMC Proficiencies</div></div>
     <div class="stat covered"><div class="stat-num">${covered}</div><div class="stat-label">Covered</div></div>
+    <div class="stat assessed"><div class="stat-num">${assessedCount}</div><div class="stat-label">Summatively Assessed</div></div>
     <div class="stat gap"><div class="stat-num">${total - covered}</div><div class="stat-label">Gaps</div></div>
     <div class="stat"><div class="stat-num">${fu.length}</div><div class="stat-label">Units shown</div></div>
   </div>`;
 
-  // Group by platform
   const platforms = [...new Set(mainStds.map(s => s.platform))].sort((a, b) => a - b);
   platforms.forEach(p => {
     const stds = mainStds.filter(s => s.platform === p);
     const pTitle = stds[0]?.platformTitle || '';
     html += `<div class="section-hd">Platform ${p}: ${pTitle}</div>`;
     stds.forEach(s => {
-      const units = cov[s.id] || [];
-      const ok = units.length > 0;
+      const taughtUnits = cov[s.id] || [];
+      const aUnits = assessedCov[s.id] || [];
+      const ok = taughtUnits.length > 0;
       html += `<div class="std-item ${ok ? 'covered' : 'gap'}">
         <div class="std-row">
           <span class="std-id">${s.id}</span>
           <span class="std-text">${s.text}</span>
           <span class="badge ${ok ? 'badge-ok' : 'badge-gap'}">${ok ? 'covered' : 'gap'}</span>
         </div>
-        ${ok ? `<div class="chip-row">${units.map(unitChip).join('')}</div>` : ''}
+        ${ok ? `<div class="chip-row">${taughtUnits.map(unitChip).join('')}</div>` : ''}
+        ${aUnits.length ? `<div class="chip-row assessed-chip-row"><span class="assessed-row-label">Assessed by</span>${aUnits.map(unitChip).join('')}</div>` : ''}
       </div>`;
     });
   });
@@ -143,15 +159,17 @@ function renderNMC(c, fu) {
   if (annexStds.length) {
     html += `<div class="section-hd">Annexes</div>`;
     annexStds.forEach(s => {
-      const units = cov[s.id] || [];
-      const ok = units.length > 0;
+      const taughtUnits = cov[s.id] || [];
+      const aUnits = assessedCov[s.id] || [];
+      const ok = taughtUnits.length > 0;
       html += `<div class="std-item ${ok ? 'covered' : 'gap'}">
         <div class="std-row">
           <span class="std-id">${s.id}</span>
           <span class="std-text">${s.text}</span>
           <span class="badge ${ok ? 'badge-ok' : 'badge-gap'}">${ok ? 'covered' : 'gap'}</span>
         </div>
-        ${ok ? `<div class="chip-row">${units.map(unitChip).join('')}</div>` : ''}
+        ${ok ? `<div class="chip-row">${taughtUnits.map(unitChip).join('')}</div>` : ''}
+        ${aUnits.length ? `<div class="chip-row assessed-chip-row"><span class="assessed-row-label">Assessed by</span>${aUnits.map(unitChip).join('')}</div>` : ''}
       </div>`;
     });
   }
@@ -167,11 +185,26 @@ function renderProgramme(c, fu) {
     if (!cov[ref].find(x => x.code === u.code)) cov[ref].push(u);
   })));
 
+  const assessedCov = {};
+  fu.forEach(u => {
+    const idx = new Set();
+    (u.assessments || []).forEach(a => (a.assesses_outcomes || []).forEach(i => idx.add(i)));
+    u.outcomes.forEach((o, i) => {
+      if (!idx.has(i)) return;
+      (o.po || []).forEach(ref => {
+        if (!assessedCov[ref]) assessedCov[ref] = [];
+        if (!assessedCov[ref].find(x => x.code === u.code)) assessedCov[ref].push(u);
+      });
+    });
+  });
+
   const covered = programme.filter(p => cov[p.id]?.length).length;
+  const assessedCount = programme.filter(p => assessedCov[p.id]?.length).length;
 
   let html = `<div class="stats-bar">
     <div class="stat"><div class="stat-num">${programme.length}</div><div class="stat-label">Programme Outcomes</div></div>
     <div class="stat covered"><div class="stat-num">${covered}</div><div class="stat-label">Covered</div></div>
+    <div class="stat assessed"><div class="stat-num">${assessedCount}</div><div class="stat-label">Summatively Assessed</div></div>
     <div class="stat gap"><div class="stat-num">${programme.length - covered}</div><div class="stat-label">Gaps</div></div>
     <div class="stat"><div class="stat-num">${fu.length}</div><div class="stat-label">Units shown</div></div>
   </div>`;
@@ -182,15 +215,17 @@ function renderProgramme(c, fu) {
     const catTitle = pos[0]?.categoryTitle || '';
     html += `<div class="section-hd">Category ${cat}: ${catTitle}</div>`;
     pos.forEach(p => {
-      const units = cov[p.id] || [];
-      const ok = units.length > 0;
+      const taughtUnits = cov[p.id] || [];
+      const aUnits = assessedCov[p.id] || [];
+      const ok = taughtUnits.length > 0;
       html += `<div class="std-item ${ok ? 'covered' : 'gap'}">
         <div class="std-row">
           <span class="std-id">${p.id}</span>
           <span class="std-text">${p.text}</span>
           <span class="badge ${ok ? 'badge-ok' : 'badge-gap'}">${ok ? 'covered' : 'gap'}</span>
         </div>
-        ${ok ? `<div class="chip-row">${units.map(unitChip).join('')}</div>` : ''}
+        ${ok ? `<div class="chip-row">${taughtUnits.map(unitChip).join('')}</div>` : ''}
+        ${aUnits.length ? `<div class="chip-row assessed-chip-row"><span class="assessed-row-label">Assessed by</span>${aUnits.map(unitChip).join('')}</div>` : ''}
       </div>`;
     });
   });
@@ -304,6 +339,81 @@ function renderGaps(c, fu) {
   c.innerHTML = html;
 }
 
+/* ── Assessment Map view ──────────────────────────────── */
+function renderAssessments(c, fu) {
+  const unitsWithData = fu.filter(u =>
+    (u.assessments || []).some(a => (a.assesses_outcomes || []).length > 0)
+  );
+
+  let totalAssessed = 0, totalTaught = 0;
+  unitsWithData.forEach(u => {
+    const idx = new Set();
+    (u.assessments || []).forEach(a => (a.assesses_outcomes || []).forEach(i => idx.add(i)));
+    totalAssessed += idx.size;
+    totalTaught += u.outcomes.length - idx.size;
+  });
+
+  let html = `<div class="stats-bar">
+    <div class="stat"><div class="stat-num">${unitsWithData.length}</div><div class="stat-label">Units mapped</div></div>
+    <div class="stat assessed"><div class="stat-num">${totalAssessed}</div><div class="stat-label">Outcomes assessed</div></div>
+    <div class="stat"><div class="stat-num">${totalTaught}</div><div class="stat-label">Outcomes taught only</div></div>
+    <div class="stat"><div class="stat-num">${fu.length - unitsWithData.length}</div><div class="stat-label">Units pending data</div></div>
+  </div>
+  <div class="assess-note">Constructive alignment view: which learning outcomes are summatively assessed versus taught or formatively assessed only. Units without assessment mapping data are excluded from this view.</div>`;
+
+  if (!unitsWithData.length) {
+    html += '<div class="empty"><p>No assessment mapping data available for the current filter selection.</p></div>';
+    c.innerHTML = html;
+    return;
+  }
+
+  [1, 2, 3].forEach(yr => {
+    const yUnits = unitsWithData.filter(u => u.year === yr);
+    if (!yUnits.length) return;
+    html += `<div class="section-hd">Year ${yr}</div>`;
+    yUnits.forEach(u => {
+      const assessedIdx = new Set();
+      (u.assessments || []).forEach(a => (a.assesses_outcomes || []).forEach(i => assessedIdx.add(i)));
+
+      html += `<div class="unit-card">
+        <div class="unit-card-hd">
+          <div class="unit-code">${u.code}</div>
+          <div class="unit-title">${u.title}</div>
+          ${unitInfoGrid(u)}
+        </div>
+        <div class="unit-card-body">`;
+
+      (u.assessments || []).forEach(a => {
+        const loCount = (a.assesses_outcomes || []).length;
+        html += `<div class="assess-method-row">
+          <span class="assess-method-label">Assessment</span>
+          <span class="assess-method-text">${a.type}${a.length ? ' — ' + a.length : ''}</span>
+          ${a.weight ? `<span class="assess-weight-badge">${a.weight}%</span>` : ''}
+          ${loCount ? `<span class="lo-count-chip">Assesses ${loCount} LO${loCount !== 1 ? 's' : ''}</span>` : ''}
+        </div>`;
+      });
+
+      u.outcomes.forEach((o, i) => {
+        const isAssessed = assessedIdx.has(i);
+        const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
+        const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+        html += `<div class="outcome-item ${isAssessed ? 'assessed-outcome' : 'taught-outcome'}">
+          <div class="outcome-cat">${o.category}</div>
+          <div class="outcome-text">${o.text}
+            <span class="outcome-status-tag ${isAssessed ? 'assessed-tag' : 'taught-tag'}">${isAssessed ? 'Summatively assessed' : 'Taught / formative'}</span>
+          </div>
+          ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
+          ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
+        </div>`;
+      });
+
+      html += `</div></div>`;
+    });
+  });
+
+  c.innerHTML = html;
+}
+
 /* ── Unit Detail view ─────────────────────────────────── */
 function renderUnitDetail(c) {
   const u = units.find(x => x.code === selectedUnit);
@@ -311,7 +421,8 @@ function renderUnitDetail(c) {
 
   const backLabels = {
     nmc: 'NMC Standards', programme: 'Programme Outcomes',
-    units: 'Units Overview', gaps: 'Coverage Gaps'
+    units: 'Units Overview', gaps: 'Coverage Gaps',
+    assessments: 'Assessment Map'
   };
   const backLabel = backLabels[previousView] || 'Back';
 

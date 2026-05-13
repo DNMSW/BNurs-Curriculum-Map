@@ -9,7 +9,8 @@
 <body>
 <header>
   <div class="header-inner">
-    <div>
+    <img src="images/uom-logo.png" class="uom-logo" alt="University of Manchester" onerror="this.style.display='none'">
+    <div class="header-text">
       <h1>BNurs Curriculum Mapping</h1>
       <p class="subtitle">University of Manchester &middot; School of Health Sciences &middot; NMC Future Nurse (2018)</p>
     </div>
@@ -17,6 +18,7 @@
 </header>
 
 <div class="filter-bar">
+  <span class="search-by-label">Search by</span>
   <div class="filter-group">
     <label>Year of Study</label>
     <div class="btn-group">
@@ -26,6 +28,7 @@
       <button class="filter-btn" data-filter="year" data-value="3">Year 3</button>
     </div>
   </div>
+  <span class="filter-divider" aria-hidden="true"></span>
   <div class="filter-group">
     <label>Field of Practice</label>
     <div class="btn-group">
@@ -35,17 +38,23 @@
       <button class="filter-btn" data-filter="field" data-value="CYP">CYP</button>
     </div>
   </div>
+  <span class="filter-divider" aria-hidden="true"></span>
   <div class="filter-group filter-group--search">
-    <label>Search</label>
-    <input type="text" id="search" placeholder="Keyword, unit code or NMC ref (e.g. 4.5)…" autocomplete="off" />
+    <label>Keyword</label>
+    <input type="text" id="search" placeholder="Unit code or NMC ref (e.g. 4.5)&hellip;" autocomplete="off" />
   </div>
 </div>
 
 <nav class="main-nav">
-  <button class="nav-btn active" data-view="nmc" onclick="setView('nmc', this)">NMC Standards</button>
+  <button class="nav-btn active" data-view="nmc" onclick="setView('nmc', this)">
+    <img src="images/nmc-logo.png" class="nav-btn-logo" alt="" onerror="this.style.display='none'">
+    NMC Standards
+  </button>
   <button class="nav-btn" data-view="programme" onclick="setView('programme', this)">Programme Outcomes</button>
   <button class="nav-btn" data-view="units" onclick="setView('units', this)">Units Overview</button>
-  <button class="nav-btn" data-view="gaps" onclick="setView('gaps', this)">Coverage Gaps</button>
+  <button class="nav-btn" data-view="assessments" onclick="setView('assessments', this)">&#9654; Assessment Map</button>
+  <span class="nav-spacer"></span>
+  <button class="nav-btn nav-btn-gaps" data-view="gaps" onclick="setView('gaps', this)">&#9651; Coverage Gaps</button>
   <button class="nav-btn export-btn" onclick="exportCSV()">&#8659; Export CSV</button>
 </nav>
 
