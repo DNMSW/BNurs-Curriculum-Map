@@ -16,7 +16,8 @@
         "type": "Collaborative presentation",
         "length": "15\u201318 mins",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -89,11 +90,7 @@
         "length": "2 hours",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2
-        ]
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -156,16 +153,11 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Open book examination",
-        "length": "2 hours",
+        "type": "Written examination (on-campus)",
+        "length": "1.5 hours",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2,
-          3
-        ]
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -231,13 +223,14 @@
       "CYP"
     ],
     "discovery": false,
-    "note": "Unit specification PDF was not accessible \u2013 outcomes and NMC mappings are indicative based on unit title and programme context",
+    "note": "Unit specification PDF was empty; assessment details sourced from Canvas assignment brief",
     "assessments": [
       {
-        "type": "Assessment details not available",
-        "length": "",
+        "type": "Care plan (APIE format, individual, based on provided case study)",
+        "length": "Not specified",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -311,16 +304,18 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "E-learning modules",
+        "type": "E-Learning for Health online course",
         "length": "",
         "summative": true,
-        "weight": 50
+        "weight": 50,
+        "assesses_outcomes": [0, 1, 2]
       },
       {
-        "type": "Mandatory training attendance",
+        "type": "Mandatory training attendance (BLS, IPC, Moving and Handling)",
         "length": "",
         "summative": true,
-        "weight": 50
+        "weight": 50,
+        "assesses_outcomes": [0, 1, 2]
       }
     ],
     "outcomes": [
@@ -481,15 +476,17 @@
     "assessments": [
       {
         "type": "SafeMedicate (essential skills)",
-        "length": "",
+        "length": "1 hour",
         "summative": true,
-        "weight": 50
+        "pass_fail": true,
+        "assesses_outcomes": [2]
       },
       {
-        "type": "Portfolio",
+        "type": "Portfolio (3 reflections, SWOT, PDP, other-field exposure)",
         "length": "",
         "summative": true,
-        "weight": 50
+        "pass_fail": true,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -548,10 +545,11 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Written assignment",
-        "length": "",
+        "type": "Written examination",
+        "length": "2 hours",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -616,7 +614,8 @@
         "type": "Essay",
         "length": "2000 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -705,11 +704,7 @@
         "length": "3000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2
-        ]
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -801,11 +796,7 @@
         "length": "3000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2
-        ]
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -895,7 +886,8 @@
         "type": "Essay",
         "length": "2500 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -966,7 +958,8 @@
         "type": "Written assignment",
         "length": "2000 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1034,7 +1027,8 @@
         "type": "Oral presentation",
         "length": "10 mins",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1098,7 +1092,8 @@
         "type": "Open book examination",
         "length": "1 hour",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1156,7 +1151,8 @@
         "type": "Portfolio",
         "length": "",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1245,7 +1241,8 @@
         "type": "Portfolio",
         "length": "",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1334,7 +1331,8 @@
         "type": "Portfolio",
         "length": "",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1427,7 +1425,8 @@
         "type": "Negotiable assessment",
         "length": "2500 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1478,7 +1477,8 @@
         "type": "Research report (qualitative project in academic paper format with reflective account)",
         "length": "2000 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1529,13 +1529,15 @@
         "type": "SafeMedicate (advanced skills)",
         "length": "1 hour",
         "summative": true,
-        "weight": 50
+        "pass_fail": true,
+        "assesses_outcomes": [2]
       },
       {
         "type": "Portfolio (3 reflections, SWOT, PDP, field exposure)",
         "length": "",
         "summative": true,
-        "weight": 50
+        "pass_fail": true,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1595,7 +1597,8 @@
         "type": "Negotiable assessment",
         "length": "2500 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1732,7 +1735,8 @@
         "type": "Portfolio",
         "length": "",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1820,7 +1824,8 @@
         "type": "Portfolio",
         "length": "",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1908,7 +1913,8 @@
         "type": "Portfolio",
         "length": "",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -1996,7 +2002,8 @@
         "type": "Written assignment",
         "length": "2500 words",
         "summative": true,
-        "weight": 100
+        "weight": 100,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -2240,16 +2247,18 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "SafeMedicate",
-        "length": "",
+        "type": "SafeMedicate (injectable medicines — advanced skills)",
+        "length": "1 hour",
         "summative": true,
-        "weight": 50
+        "pass_fail": true,
+        "assesses_outcomes": [0, 1, 2]
       },
       {
-        "type": "Portfolio",
+        "type": "Portfolio (3 reflections, SWOT, PDP, other-field exposure)",
         "length": "",
         "summative": true,
-        "weight": 50
+        "pass_fail": true,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
@@ -2308,15 +2317,18 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "In-person presentation",
+        "type": "Situated Learning in Practice (coaching session + learner support + critical reflection)",
+        "length": "1000 words (reflection component)",
         "summative": true,
-        "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2,
-          3
-        ]
+        "weight": 60,
+        "assesses_outcomes": [0, 1, 2, 3]
+      },
+      {
+        "type": "Innovation for Practice Education (innovation 'Spark' presentation with 500-word rationale)",
+        "length": "500 words",
+        "summative": true,
+        "weight": 40,
+        "assesses_outcomes": [0, 1, 2, 3]
       }
     ],
     "outcomes": [
