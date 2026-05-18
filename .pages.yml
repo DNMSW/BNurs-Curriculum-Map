@@ -1,3 +1,7 @@
+
+config:
+  backend: git-gateway
+
 collections:
   - name: modules
     label: BNurs Curriculum Map
