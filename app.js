@@ -1,20 +1,32 @@
-let nmc = [], units = [], programme = [];
+let nmc = [], units = [], programme = [], pathways = [];
 let currentView = 'nmc';
 let previousView = null;
 let selectedUnit = null;
-let filters = { year: 'all', field: 'all', search: '' };
+let filters = { pathway: 'bnurs', year: 'all', field: 'all', search: '' };
 
 async function loadData() {
   try {
-    [programme, nmc, units] = await Promise.all([
+    [programme, nmc, units, pathways] = await Promise.all([
       fetch('data/programmeOutcomes.json').then(r => r.json()),
       fetch('data/nmcStandards.json').then(r => r.json()),
-      fetch('data/units.json').then(r => r.json())
+      fetch('data/units.json').then(r => r.json()),
+      fetch('data/pathways.json').then(r => r.json()).then(r => r.pathways)
     ]);
     render();
+    updateYear4Visibility();
   } catch (e) {
     document.getElementById('content').innerHTML =
       '<div class="empty"><p>Error loading data. Open this file via a local server (e.g. <code>npx serve .</code>) rather than directly in the browser.</p></div>';
+  }
+}
+
+function updateYear4Visibility() {
+  const year4Btn = document.getElementById('year4-btn');
+  if (filters.pathway === 'mnurs') {
+    year4Btn.style.display = 'inline-block';
+  } else {
+    year4Btn.style.display = 'none';
+    if (filters.year === '4') filters.year = 'all';
   }
 }
 
@@ -47,12 +59,23 @@ function goBack() {
 
 function getFilteredUnits() {
   const q = filters.search.toLowerCase();
+  const pathwayConfig = pathways[filters.pathway];
+  
   return units.filter(u => {
+    // Apply pathway filtering
+    if (filters.pathway === 'bnurs' && pathwayConfig.excludeUnits.includes(u.code)) return false;
+    if (filters.pathway === 'mnurs' && !pathwayConfig.years.includes(u.year)) return false;
+    
+    // Apply year filtering
     if (filters.year !== 'all' && u.year !== +filters.year) return false;
+    
+    // Apply field filtering
     if (filters.field !== 'all') {
       const f = u.fields || [];
       if (!f.includes(filters.field) && !f.includes('All')) return false;
     }
+    
+    // Apply search filtering
     if (q) {
       const inCode  = u.code.toLowerCase().includes(q);
       const inTitle = u.title.toLowerCase().includes(q);
@@ -85,12 +108,16 @@ function unitInfoGrid(u) {
   const discoveryItem = u.discovery
     ? `<div class="unit-info-item"><span class="unit-info-label">Type</span><span class="unit-info-value unit-info-discovery">Discovery unit</span></div>`
     : '';
+  const optionalItem = (u.code === 'NURS31342' || u.year === 4)
+    ? `<div class="unit-info-item"><span class="unit-info-label">Availability</span><span class="unit-info-value unit-info-optional">Optional / ${filters.pathway === 'mnurs' ? 'MNurs only' : 'Elective'}</span></div>`
+    : '';
   return `<div class="unit-info-grid">
     <div class="unit-info-item"><span class="unit-info-label">Year of study</span><span class="unit-info-value">Year ${u.year}</span></div>
     <div class="unit-info-item"><span class="unit-info-label">FHEQ level</span><span class="unit-info-value">Level ${u.level}</span></div>
     <div class="unit-info-item"><span class="unit-info-label">Credits</span><span class="unit-info-value">${u.credits}</span></div>
     <div class="unit-info-item"><span class="unit-info-label">Fields</span><span class="unit-info-value">${fieldsText}</span></div>
     ${discoveryItem}
+    ${optionalItem}
   </div>`;
 }
 
@@ -247,10 +274,11 @@ function renderUnits(c, fu) {
     return;
   }
 
+  const maxYear = filters.pathway === 'mnurs' ? 4 : 3;
   let html = '';
-  [1, 2, 3].forEach(yr => {
+  for (let yr = 1; yr <= maxYear; yr++) {
     const yUnits = fu.filter(u => u.year === yr);
-    if (!yUnits.length) return;
+    if (!yUnits.length) continue;
     html += `<div class="section-hd">Year ${yr} – Level ${yr + 3}</div>`;
     yUnits.forEach(u => {
       const assessText = (u.assessments || []).map(a =>
@@ -279,7 +307,7 @@ function renderUnits(c, fu) {
         </div>
       </div>`;
     });
-  });
+  }
 
   c.innerHTML = html;
 }
@@ -367,7 +395,7 @@ function renderAssessments(c, fu) {
     <div class="stat"><div class="stat-num">${totalTaught}</div><div class="stat-label">Outcomes taught only</div></div>
     <div class="stat"><div class="stat-num">${fu.length - unitsWithData.length}</div><div class="stat-label">Units pending data</div></div>
   </div>
-  <div class="assess-note">Constructive alignment view: which learning outcomes are summatively assessed versus taught or formatively assessed only. Units without assessment mapping data are excluded from this view.</div>`;
+  <div class="assess-note">Constructive alignment view: which learning outcomes are summatively assessed versus taught or formatively assessed only. Units without assessment mapping data are excluded.</div>`;
 
   if (!unitsWithData.length) {
     html += '<div class="empty"><p>No assessment mapping data available for the current filter selection.</p></div>';
@@ -375,9 +403,10 @@ function renderAssessments(c, fu) {
     return;
   }
 
-  [1, 2, 3].forEach(yr => {
+  const maxYear = filters.pathway === 'mnurs' ? 4 : 3;
+  for (let yr = 1; yr <= maxYear; yr++) {
     const yUnits = unitsWithData.filter(u => u.year === yr);
-    if (!yUnits.length) return;
+    if (!yUnits.length) continue;
     html += `<div class="section-hd">Year ${yr}</div>`;
     yUnits.forEach(u => {
       const assessedIdx = new Set();
@@ -418,7 +447,7 @@ function renderAssessments(c, fu) {
 
       html += `</div></div>`;
     });
-  });
+  }
 
   c.innerHTML = html;
 }
@@ -512,6 +541,12 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     document.querySelectorAll(`.filter-btn[data-filter="${ft}"]`).forEach(b => b.classList.remove('active'));
     this.classList.add('active');
     filters[ft] = this.dataset.value;
+    
+    // If pathway changed, update Year 4 visibility
+    if (ft === 'pathway') {
+      updateYear4Visibility();
+    }
+    
     render();
   });
 });
