@@ -1384,7 +1384,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Portfolio",
+        "type": "PARE document (Practice Assessment Record and Evaluation)",
         "length": "",
         "summative": true,
         "weight": 100,
@@ -1479,7 +1479,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Portfolio",
+        "type": "PARE document (Practice Assessment Record and Evaluation)",
         "length": "",
         "summative": true,
         "weight": 100,
@@ -1574,7 +1574,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Portfolio",
+        "type": "PARE document (Practice Assessment Record and Evaluation)",
         "length": "",
         "summative": true,
         "weight": 100,
@@ -2022,7 +2022,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Portfolio",
+        "type": "PARE document (Practice Assessment Record and Evaluation)",
         "length": "",
         "summative": true,
         "weight": 100,
@@ -2127,7 +2127,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Portfolio",
+        "type": "PARE document (Practice Assessment Record and Evaluation)",
         "length": "",
         "summative": true,
         "weight": 100,
@@ -2234,7 +2234,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "Portfolio",
+        "type": "PARE document (Practice Assessment Record and Evaluation)",
         "length": "",
         "summative": true,
         "weight": 100,
