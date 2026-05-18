@@ -1,0 +1,16 @@
+{
+  "pathways": {
+    "bnurs": {
+      "name": "BNurs (3-Year)",
+      "description": "Bachelor of Nursing - Core pathway",
+      "years": [1, 2, 3],
+      "excludeUnits": ["NURS31342", "NURS41002", "NURS41000", "NURS41010", "NURS63332", "NURS41012"]
+    },
+    "mnurs": {
+      "name": "MNurs (4-Year)",
+      "description": "Master of Nursing - Extended pathway with advanced practice",
+      "years": [1, 2, 3, 4],
+      "excludeUnits": []
+    }
+  }
+}

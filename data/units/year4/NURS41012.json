@@ -1,0 +1,20 @@
+{
+  "unitCode": "NURS41012",
+  "unitTitle": "Nurse Educator in Practice",
+  "year": 4,
+  "credits": 20,
+  "fields": ["Adult", "Mental Health", "Children & Young People"],
+  "learningOutcomes": {
+    "knowledgeAndUnderstanding": [
+      "How practice learning is organised and the necessary conditions for the delivery of safe and effective learning experiences for students in practice",
+      "The teaching and learning styles, theories and models that can be used to enhance student learning in practice",
+      "The roles and responsibilities of practice supervisors and practice assessors and their contribution to student assessment and progression",
+      "The factors that influence how students integrate effectively into practice settings",
+      "The connection between learning culture and the safety of the public their role in preserving public safety",
+      "The most up to date systems for educational governance and quality"
+    ],
+    "intellectualSkills": [],
+    "practicalSkills": [],
+    "transferableSkillsAndPersonalQualities": []
+  }
+}

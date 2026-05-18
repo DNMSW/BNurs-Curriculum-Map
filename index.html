@@ -20,13 +20,21 @@
 <div class="filter-bar">
   <span class="search-by-label">Search by</span>
   <div class="filter-group">
+    <label>Pathway</label>
+    <div class="btn-group">
+      <button class="filter-btn active" data-filter="pathway" data-value="bnurs">BNurs (3-Year)</button>
+      <button class="filter-btn" data-filter="pathway" data-value="mnurs">MNurs (4-Year)</button>
+    </div>
+  </div>
+  <span class="filter-divider" aria-hidden="true"></span>
+  <div class="filter-group">
     <label>Year of Study</label>
     <div class="btn-group">
       <button class="filter-btn active" data-filter="year" data-value="all">All Years</button>
       <button class="filter-btn" data-filter="year" data-value="1">Year 1</button>
       <button class="filter-btn" data-filter="year" data-value="2">Year 2</button>
       <button class="filter-btn" data-filter="year" data-value="3">Year 3</button>
-      <button class="filter-btn" data-filter="year" data-value="4">Year 4</button>
+      <button class="filter-btn" id="year4-btn" data-filter="year" data-value="4" style="display:none;">Year 4</button>
     </div>
   </div>
   <span class="filter-divider" aria-hidden="true"></span>
@@ -53,6 +61,7 @@
   </button>
   <button class="nav-btn" data-view="programme" onclick="setView('programme', this)">Programme Outcomes</button>
   <button class="nav-btn" data-view="units" onclick="setView('units', this)">Units Overview</button>
+  <button class="nav-btn" data-view="pare" onclick="setView('pare', this)">PARE Proficiencies</button>
   <button class="nav-btn" data-view="assessments" onclick="setView('assessments', this)">&#9654; Assessment Map</button>
   <span class="nav-spacer"></span>
   <button class="nav-btn nav-btn-gaps" data-view="gaps" onclick="setView('gaps', this)">&#9651; Coverage Gaps</button>
@@ -73,10 +82,9 @@
 <script src="app.js"></script>
 <script src="csv.js"></script>
 
-<!-- Jean McFarlane NHS Trust badge -->
-<div id="jmt-nhs-badge" style="position:fixed;top:0;right:0;background:#005EB8;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;padding:5px 12px 5px 10px;z-index:99999;display:flex;align-items:center;gap:7px;letter-spacing:0.01em;border-bottom-left-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.3);">
-  <span style="background:#fff;color:#005EB8;font-size:9px;font-weight:900;padding:1px 4px;border-radius:1px;letter-spacing:0.08em;flex-shrink:0;">NHS</span>
-  Jean McFarlane NHS Trust
+<!-- University of Manchester Logo Badge -->
+<div id="uom-badge" style="position:fixed;top:0;right:0;z-index:99999;padding:10px;">
+  <img src="images/uom-logo.png" alt="University of Manchester" style="height:40px;width:auto;box-shadow:0 1px 4px rgba(0,0,0,.2);" onerror="this.style.display='none'">
 </div>
 </body>
 </html>

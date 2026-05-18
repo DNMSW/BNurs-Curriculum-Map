@@ -1,0 +1,149 @@
+{
+  "standards": [
+    {
+      "id": "P1",
+      "title": "Demonstrate and apply knowledge of commonly encountered presentations to inform a holistic nursing assessment including physical, psychological and socio-cultural needs.",
+      "category": "Assessment & Holistic Care"
+    },
+    {
+      "id": "P2",
+      "title": "Demonstrates understanding of a person's age and development in undertaking an accurate nursing assessment.",
+      "category": "Assessment & Holistic Care"
+    },
+    {
+      "id": "P3",
+      "title": "Accurately processes all information gathered during the assessment process to identify needs for fundamental nursing care and develop and document person-centred care plans.",
+      "category": "Assessment & Holistic Care"
+    },
+    {
+      "id": "P4",
+      "title": "Work in partnership with people, families and carers to encourage shared decision-making to manage their own care when appropriate.",
+      "category": "Partnership & Shared Decision-Making"
+    },
+    {
+      "id": "P5",
+      "title": "Demonstrates an understanding of the importance of therapeutic relationships in providing an appropriate level of care to support people with mental health, behavioural, cognitive and learning challenges.",
+      "category": "Therapeutic Relationships & Mental Health"
+    },
+    {
+      "id": "P6",
+      "title": "Provides person centred care to people experiencing symptoms such as anxiety, confusion, pain and breathlessness using verbal and non-verbal communication and appropriate use of open and closed questioning.",
+      "category": "Symptom Management & Communication"
+    },
+    {
+      "id": "P7",
+      "title": "Takes appropriate action in responding promptly to signs of deterioration or distress considering mental, physical, cognitive and behavioural health.",
+      "category": "Acute Response & Safety"
+    },
+    {
+      "id": "P8",
+      "title": "Assesses comfort levels, rest and sleep patterns demonstrating understanding of the specific needs of the person being cared for.",
+      "category": "Comfort & Rest"
+    },
+    {
+      "id": "P9",
+      "title": "Maintains privacy and dignity in implementing care to promote rest, sleep and comfort and encourages independence where appropriate.",
+      "category": "Dignity & Independence"
+    },
+    {
+      "id": "P10",
+      "title": "Assesses skin and hygiene status and determines the need for intervention, making sure that the individual remains as independent as possible.",
+      "category": "Personal Hygiene & Skin Care"
+    },
+    {
+      "id": "P11",
+      "title": "Assists with washing, bathing, shaving and dressing and uses appropriate bed making techniques.",
+      "category": "Personal Hygiene & Skin Care"
+    },
+    {
+      "id": "P12",
+      "title": "Supports people with their diet and nutritional needs, taking cultural practices into account and uses appropriate aids to assist when needed.",
+      "category": "Nutrition & Hydration"
+    },
+    {
+      "id": "P13",
+      "title": "Can explain the signs and symptoms of dehydration or fluid retention and accurately records fluid intake and output.",
+      "category": "Nutrition & Hydration"
+    },
+    {
+      "id": "P14",
+      "title": "Assists with toileting, maintaining dignity and privacy and managing the use of appropriate aids including pans, bottles and commodes.",
+      "category": "Elimination & Continence"
+    },
+    {
+      "id": "P15",
+      "title": "Selects and uses continence and feminine hygiene products, for example, pads, sheaths and appliances as appropriate.",
+      "category": "Elimination & Continence"
+    },
+    {
+      "id": "P16",
+      "title": "Assesses the need for support in caring for people with reduced mobility and demonstrates understanding of the level of intervention needed to maintain safety and promote independence.",
+      "category": "Mobility & Manual Handling"
+    },
+    {
+      "id": "P17",
+      "title": "Uses a range of appropriate moving and handling techniques and equipment to support people with impaired mobility.",
+      "category": "Mobility & Manual Handling"
+    },
+    {
+      "id": "P18",
+      "title": "Consistently utilises evidence based hand washing techniques.",
+      "category": "Infection Prevention & Control"
+    },
+    {
+      "id": "P19",
+      "title": "Identifies potential infection risks and responds appropriately using best practice guidelines and utilises personal protection equipment appropriately.",
+      "category": "Infection Prevention & Control"
+    },
+    {
+      "id": "P20",
+      "title": "Demonstrates understanding of safe decontamination and safe disposal of waste, laundry and sharps.",
+      "category": "Infection Prevention & Control"
+    },
+    {
+      "id": "P21",
+      "title": "Effectively uses manual techniques and electronic devices to take, record and interpret vital signs, and escalate as appropriate.",
+      "category": "Vital Signs & Monitoring"
+    },
+    {
+      "id": "P22",
+      "title": "Accurately measure weight and height, calculate body mass index and recognise healthy ranges and clinical significance of low/high readings.",
+      "category": "Physical Assessment"
+    },
+    {
+      "id": "P23",
+      "title": "Collect and observe sputum, urine and stool specimens, undertaking routine analysis and interpreting findings.",
+      "category": "Specimen Collection & Analysis"
+    },
+    {
+      "id": "P24",
+      "title": "Accurately undertakes person centred risk assessments proactively using a range of evidence based assessment and improvement tools.",
+      "category": "Risk Assessment"
+    },
+    {
+      "id": "P25",
+      "title": "Applies the principles of health and safety regulations to maintain safe work and care environments and proactively responds to potential hazards.",
+      "category": "Health & Safety"
+    },
+    {
+      "id": "P26",
+      "title": "Demonstrate an understanding of the principles of partnership, collaboration and multi-agency working across all sectors of health and social care.",
+      "category": "Partnership & Collaboration"
+    },
+    {
+      "id": "P27",
+      "title": "Demonstrate an understanding of the challenges of providing safe nursing care for people with co-morbidities including physical, psychological and socio-cultural needs.",
+      "category": "Complex Care Needs"
+    },
+    {
+      "id": "P28",
+      "title": "Understand the principles and processes involved in supporting people and families so that they can maintain their independence as much as possible.",
+      "category": "Independence & Support"
+    },
+    {
+      "id": "P29",
+      "title": "Provides accurate, clear, verbal, digital or written information when handing over care responsibilities to others.",
+      "category": "Handover & Communication"
+    }
+  ]
+}
