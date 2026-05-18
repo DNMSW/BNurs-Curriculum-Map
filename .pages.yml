@@ -1,13 +1,18 @@
 collections:
   - name: modules
     label: BNurs Curriculum Map
+    type: collection
 
-    files:
-      - name: year1
-        label: Year 1 Modules
-        file: data/year1.yml
+    path: data/modules
 
-        fields:
-          - name: module_name
-            label: Module Name
-            type: text
+    fields:
+      - name: module_name
+        label: Module Name
+        type: text
+
+      - name: semester
+        label: Semester
+        type: select
+        options:
+          - Semester 1
+          - Semester 2
