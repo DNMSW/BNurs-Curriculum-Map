@@ -1,4 +1,4 @@
-let nmc = [], units = [], programme = [], pathways = [];
+let nmc = [], units = [], programme = [], pathways = [], pare = [];
 let currentView = 'nmc';
 let previousView = null;
 let selectedUnit = null;
@@ -6,11 +6,12 @@ let filters = { pathway: 'bnurs', year: 'all', field: 'all', search: '' };
 
 async function loadData() {
   try {
-    [programme, nmc, units, pathways] = await Promise.all([
+    [programme, nmc, units, pathways, pare] = await Promise.all([
       fetch('data/programmeOutcomes.json').then(r => r.json()),
       fetch('data/nmcStandards.json').then(r => r.json()),
       fetch('data/units.json').then(r => r.json()),
-      fetch('data/pathways.json').then(r => r.json()).then(r => r.pathways)
+      fetch('data/pathways.json').then(r => r.json()).then(r => r.pathways),
+      fetch('data/pareStandards.json').then(r => r.json()).then(r => r.standards)
     ]);
     render();
     updateYear4Visibility();
@@ -88,6 +89,17 @@ function getFilteredUnits() {
   });
 }
 
+function getPlacementUnits() {
+  const placementCodes = ['NURS31311', 'NURS31312', 'NURS31322', 'NURS41010'];
+  const pathwayConfig = pathways[filters.pathway];
+  
+  return units.filter(u => {
+    if (!placementCodes.includes(u.code)) return false;
+    if (filters.pathway === 'bnurs' && pathwayConfig.excludeUnits.includes(u.code)) return false;
+    return true;
+  });
+}
+
 function ycls(year) { return ["", "y1", "y2", "y3", "y4"][year] || ''; }
 
 function outcomeFlags(o) {
@@ -128,6 +140,7 @@ function render() {
   if      (currentView === 'nmc')         renderNMC(c, fu);
   else if (currentView === 'programme')   renderProgramme(c, fu);
   else if (currentView === 'units')       renderUnits(c, fu);
+  else if (currentView === 'pare')        renderPARE(c);
   else if (currentView === 'gaps')        renderGaps(c, fu);
   else if (currentView === 'assessments') renderAssessments(c, fu);
   else if (currentView === 'unit-detail') renderUnitDetail(c);
@@ -295,12 +308,14 @@ function renderUnits(c, fu) {
           ${u.outcomes.map(o => {
             const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
             const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+            const pareRefs = (o.pare || []).map(p => `<span class="pare-ref ref-link" onclick="showRefPopup('${p}','pare')">${p}</span>`).join('');
             return `<div class="outcome-item${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
               <div class="outcome-cat">${o.category}</div>
               <div class="outcome-text">${o.text}</div>
               ${outcomeFlags(o)}
               ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
               ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>`  : ''}
+              ${pareRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PARE</span>${pareRefs}</div>`  : ''}
             </div>`;
           }).join('')}
           <div class="assessment-block"><strong>Assessment:</strong> ${assessText || 'See unit specification'}</div>
@@ -308,6 +323,52 @@ function renderUnits(c, fu) {
       </div>`;
     });
   }
+
+  c.innerHTML = html;
+}
+
+/* ── PARE Proficiencies view ──────────────────────────── */
+function renderPARE(c) {
+  const placementUnits = getPlacementUnits();
+  const pareMap = {};
+  
+  // Map PARE proficiencies to placement units
+  placementUnits.forEach(u => {
+    u.outcomes.forEach(o => {
+      (o.pare || []).forEach(p => {
+        if (!pareMap[p]) pareMap[p] = [];
+        if (!pareMap[p].find(x => x.code === u.code)) pareMap[p].push(u);
+      });
+    });
+  });
+
+  const covered = Object.keys(pareMap).length;
+  const total = pare.length;
+
+  let html = `<div class="stats-bar">
+    <div class="stat"><div class="stat-num">${total}</div><div class="stat-label">PARE Proficiencies</div></div>
+    <div class="stat covered"><div class="stat-num">${covered}</div><div class="stat-label">Covered</div></div>
+    <div class="stat gap"><div class="stat-num">${total - covered}</div><div class="stat-label">Gaps</div></div>
+    <div class="stat"><div class="stat-num">${placementUnits.length}</div><div class="stat-label">Placement units shown</div></div>
+  </div>`;
+
+  const categories = [...new Set(pare.map(p => p.category))];
+  categories.forEach(cat => {
+    const pareInCat = pare.filter(p => p.category === cat);
+    html += `<div class="section-hd">${cat}</div>`;
+    pareInCat.forEach(p => {
+      const taughtUnits = pareMap[p.id] || [];
+      const ok = taughtUnits.length > 0;
+      html += `<div class="std-item ${ok ? 'covered' : 'gap'}">
+        <div class="std-row">
+          <span class="std-id">${p.id}</span>
+          <span class="std-text">${p.title}</span>
+          <span class="badge ${ok ? 'badge-ok' : 'badge-gap'}">${ok ? 'covered' : 'gap'}</span>
+        </div>
+        ${ok ? `<div class="chip-row">${taughtUnits.map(unitChip).join('')}</div>` : ''}
+      </div>`;
+    });
+  });
 
   c.innerHTML = html;
 }
@@ -434,6 +495,7 @@ function renderAssessments(c, fu) {
         const isAssessed = assessedIdx.has(i);
         const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
         const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+        const pareRefs = (o.pare || []).map(p => `<span class="pare-ref ref-link" onclick="showRefPopup('${p}','pare')">${p}</span>`).join('');
         html += `<div class="outcome-item ${isAssessed ? 'assessed-outcome' : 'taught-outcome'}${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}
@@ -442,6 +504,7 @@ function renderAssessments(c, fu) {
           ${outcomeFlags(o)}
           ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
           ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
+          ${pareRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PARE</span>${pareRefs}</div>` : ''}
         </div>`;
       });
 
@@ -459,7 +522,7 @@ function renderUnitDetail(c) {
 
   const backLabels = {
     nmc: 'NMC Standards', programme: 'Programme Outcomes',
-    units: 'Units Overview', gaps: 'Coverage Gaps',
+    units: 'Units Overview', pare: 'PARE Proficiencies', gaps: 'Coverage Gaps',
     assessments: 'Assessment Map'
   };
   const backLabel = backLabels[previousView] || 'Back';
@@ -481,12 +544,14 @@ function renderUnitDetail(c) {
       ${u.outcomes.map(o => {
         const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
         const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+        const pareRefs = (o.pare || []).map(p => `<span class="pare-ref ref-link" onclick="showRefPopup('${p}','pare')">${p}</span>`).join('');
         return `<div class="outcome-item${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}</div>
           ${outcomeFlags(o)}
           ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
           ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
+          ${pareRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PARE</span>${pareRefs}</div>` : ''}
         </div>`;
       }).join('')}
       <div class="assessment-block"><strong>Assessment:</strong> ${assessText || 'See unit specification'}</div>
@@ -509,18 +574,23 @@ function showRefPopup(id, type) {
       ? `Platform ${item.platform}: ${item.platformTitle}`
       : item.platformTitle;
     labelClass = 'popup-label-nmc';
-  } else {
+  } else if (type === 'po') {
     item = programme.find(p => p.id === id);
     if (!item) return;
     subtitle = `Category ${item.category}: ${item.categoryTitle}`;
     labelClass = 'popup-label-po';
+  } else if (type === 'pare') {
+    item = pare.find(p => p.id === id);
+    if (!item) return;
+    subtitle = item.category;
+    labelClass = 'popup-label-pare';
   }
 
   body.innerHTML = `
-    <div class="popup-label ${labelClass}">${type === 'nmc' ? 'NMC Standard' : 'Programme Outcome'}</div>
+    <div class="popup-label ${labelClass}">${type === 'nmc' ? 'NMC Standard' : type === 'po' ? 'Programme Outcome' : 'PARE Proficiency'}</div>
     <div class="popup-id">${item.id}</div>
     <div class="popup-subtitle">${subtitle}</div>
-    <div class="popup-text">${item.text}</div>`;
+    <div class="popup-text">${item.text || item.title}</div>`;
 
   document.getElementById('ref-modal').classList.add('active');
 }
