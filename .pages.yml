@@ -1,11 +1,6 @@
-media:
-  input: assets/uploads
-  output: /assets/uploads
-
 collections:
   - name: modules
     label: BNurs Curriculum Map
-    label_singular: Module
 
     files:
       - name: year1
@@ -13,29 +8,6 @@ collections:
         file: data/year1.yml
 
         fields:
-          - name: modules
-            label: Modules
-            type: list
-            item:
-              type: object
-              fields:
-                - name: module_name
-                  label: Module name
-                  type: string
-
-                - name: semester
-                  label: Semester
-                  type: select
-                  options:
-                    - Semester 1
-                    - Semester 2
-
-                - name: themes
-                  label: Themes
-                  type: multiselect
-                  options:
-                    - Clinical Skills
-                    - Professionalism
-                    - Mental Health
-                    - Digital Capability
-                    - Patient Safety
+          - name: module_name
+            label: Module Name
+            type: text
