@@ -67,6 +67,13 @@ function getFilteredUnits() {
 
 function ycls(year) { return ["", "y1", "y2", "y3", "y4"][year] || ''; }
 
+function outcomeFlags(o) {
+  const flags = [];
+  if (o.flag_missing_nmc) flags.push('<span class="outcome-flag flag-nmc" title="No NMC standard mapping — requires explicit mapping">&#9888; No NMC mapping</span>');
+  if (!(o.po || []).length) flags.push('<span class="outcome-flag flag-po" title="No programme outcome mapping — requires explicit mapping">&#9888; No PO mapping</span>');
+  return flags.length ? `<div class="outcome-flag-row">${flags.join('')}</div>` : '';
+}
+
 function unitChip(u) {
   const d = u.discovery ? ' discovery' : '';
   return `<span class="chip ${ycls(u.year)}${d} chip-link" title="${u.title}" onclick="showUnitDetail('${u.code}')">${u.code}</span>`;
@@ -260,9 +267,10 @@ function renderUnits(c, fu) {
           ${u.outcomes.map(o => {
             const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
             const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
-            return `<div class="outcome-item">
+            return `<div class="outcome-item${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
               <div class="outcome-cat">${o.category}</div>
               <div class="outcome-text">${o.text}</div>
+              ${outcomeFlags(o)}
               ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
               ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>`  : ''}
             </div>`;
@@ -397,11 +405,12 @@ function renderAssessments(c, fu) {
         const isAssessed = assessedIdx.has(i);
         const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
         const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
-        html += `<div class="outcome-item ${isAssessed ? 'assessed-outcome' : 'taught-outcome'}">
+        html += `<div class="outcome-item ${isAssessed ? 'assessed-outcome' : 'taught-outcome'}${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}
             <span class="outcome-status-tag ${isAssessed ? 'assessed-tag' : 'taught-tag'}">${isAssessed ? 'Summatively assessed' : 'Taught / formative'}</span>
           </div>
+          ${outcomeFlags(o)}
           ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
           ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
         </div>`;
@@ -443,9 +452,10 @@ function renderUnitDetail(c) {
       ${u.outcomes.map(o => {
         const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
         const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
-        return `<div class="outcome-item">
+        return `<div class="outcome-item${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}</div>
+          ${outcomeFlags(o)}
           ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
           ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
         </div>`;

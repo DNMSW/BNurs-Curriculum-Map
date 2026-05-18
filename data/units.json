@@ -946,7 +946,8 @@
         "text": "Demonstrate empathy, cultural competence and advocacy in dementia care",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       }
     ]
   },
@@ -1434,25 +1435,29 @@
         "text": "Demonstrate knowledge and understanding of a self-selected topic of relevance to the nursing programme",
         "category": "Knowledge and Understanding",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Critically review the academic literature relating to the chosen topic of study",
         "category": "Intellectual Skills",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Produce independent work for assessment reflecting engagement with relevant literature and subject context",
         "category": "Practical Skills",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Demonstrate skills and aptitude to successfully undertake independent academic study",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       }
     ]
   },
@@ -1481,25 +1486,29 @@
         "text": "Demonstrate critical understanding of qualitative research approaches, ethical issues and theoretical perspectives in qualitative research",
         "category": "Knowledge and Understanding",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Critically evaluate qualitative research methods, rigour, analytical techniques and underpinning evidence",
         "category": "Intellectual Skills",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Demonstrate ability to undertake and apply appropriate standards to a small, low-risk qualitative research project",
         "category": "Practical Skills",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Reflect on own knowledge and skills in qualitative research; demonstrate understanding of research limitations; participate in collaborative learning",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       }
     ]
   },
@@ -1594,25 +1603,29 @@
         "text": "Demonstrate knowledge and understanding of a self-selected topic of relevance to the nursing programme",
         "category": "Knowledge and Understanding",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Critically review the academic literature relating to the chosen topic of study",
         "category": "Intellectual Skills",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Produce independent work for assessment reflecting engagement with relevant literature and broader subject context",
         "category": "Practical Skills",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       },
       {
         "text": "Demonstrate skills and aptitude to successfully undertake independent academic study",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
-        "po": []
+        "po": [],
+        "flag_missing_nmc": true
       }
     ]
   },

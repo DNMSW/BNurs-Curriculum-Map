@@ -325,6 +325,18 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
 }
 .ref-label { font-size: 0.65rem; color: var(--muted); margin-right: 0.2rem; text-transform: uppercase; letter-spacing: 0.04em; }
 
+.outcome-flagged { border-left: 3px solid #c0392b; padding-left: 0.5rem; background: #fff8f8; }
+.outcome-flag-row { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.2rem 0 0.3rem; }
+.outcome-flag {
+  font-size: 0.67rem;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+.flag-nmc { background: #fdecea; color: #c0392b; border: 1px solid rgba(192,57,43,0.3); }
+.flag-po  { background: #fff3cd; color: #856404; border: 1px solid rgba(133,100,4,0.3); }
+
 .assessment-block {
   margin-top: 0.75rem;
   padding: 0.45rem 0.75rem;
