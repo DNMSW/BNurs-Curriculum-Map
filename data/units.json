@@ -14,7 +14,7 @@
     "assessments": [
       {
         "type": "Collaborative presentation",
-        "length": "15\u201318 mins",
+        "length": "15–18 mins",
         "summative": true,
         "weight": 100
       }
@@ -33,7 +33,7 @@
           "7.2",
           "7.4"
         ],
-        "po": []
+        "po": ["A3", "A4"]
       },
       {
         "text": "Critically evaluate evidence underpinning public health approaches and their application to nursing practice",
@@ -47,7 +47,7 @@
           "7.3",
           "7.6"
         ],
-        "po": []
+        "po": ["B1", "B3"]
       },
       {
         "text": "Communicate effectively with peers in a collaborative group presentation setting",
@@ -57,7 +57,7 @@
           "AnnexeA",
           "7.1"
         ],
-        "po": []
+        "po": ["C2", "D4", "D5"]
       },
       {
         "text": "Demonstrate awareness of professional responsibilities, ethical considerations and societal influences in public health nursing",
@@ -67,7 +67,7 @@
           "2.12",
           "7.13"
         ],
-        "po": []
+        "po": ["B7", "D6"]
       }
     ]
   },
@@ -106,7 +106,7 @@
           "3.2",
           "7.5"
         ],
-        "po": []
+        "po": ["A5"]
       },
       {
         "text": "Apply understanding of homeostasis, pathophysiology and biosciences to the assessment of nursing care needs",
@@ -118,7 +118,7 @@
           "3.10",
           "4.15"
         ],
-        "po": []
+        "po": ["B1", "B2"]
       },
       {
         "text": "Use anatomical and physiological knowledge to underpin clinical decision-making",
@@ -129,7 +129,7 @@
           "4.16",
           "4.18"
         ],
-        "po": []
+        "po": ["C4"]
       },
       {
         "text": "Demonstrate commitment to building and maintaining scientific knowledge as a foundation for evidence-based nursing",
@@ -138,7 +138,7 @@
           "3.1",
           "1.7"
         ],
-        "po": []
+        "po": ["D1", "D3"]
       }
     ]
   },
@@ -179,7 +179,7 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": ["A8"]
       },
       {
         "text": "Critically appraise research evidence and apply findings to inform nursing care and clinical decision-making",
@@ -191,7 +191,7 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": ["B1", "B3"]
       },
       {
         "text": "Apply evidence-based knowledge to the care of people with commonly encountered physical health conditions",
@@ -203,7 +203,7 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": ["C4"]
       },
       {
         "text": "Commit to lifelong learning and keeping knowledge and skills up to date through engagement with evidence",
@@ -215,7 +215,7 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": ["D1", "D3"]
       }
     ]
   },
@@ -231,7 +231,7 @@
       "CYP"
     ],
     "discovery": false,
-    "note": "Unit specification PDF was not accessible \u2013 outcomes and NMC mappings are indicative based on unit title and programme context",
+    "note": "Unit specification PDF was not accessible – outcomes and NMC mappings are indicative based on unit title and programme context",
     "assessments": [
       {
         "type": "Assessment details not available",
@@ -254,7 +254,7 @@
           "3.13",
           "4.9"
         ],
-        "po": []
+        "po": ["A1", "C3"]
       },
       {
         "text": "Apply collaborative and interprofessional working principles to nursing care planning",
@@ -268,7 +268,7 @@
           "3.15",
           "3.16"
         ],
-        "po": []
+        "po": ["B2", "B4"]
       },
       {
         "text": "Demonstrate person-centred communication and collaborative care planning skills",
@@ -281,7 +281,7 @@
           "4.17",
           "7.1"
         ],
-        "po": []
+        "po": ["C2", "C3", "C4"]
       },
       {
         "text": "Work effectively with others and demonstrate professional accountability in the care planning process",
@@ -293,7 +293,7 @@
           "5.4",
           "7.8"
         ],
-        "po": []
+        "po": ["B7", "D6"]
       }
     ]
   },
@@ -341,7 +341,7 @@
           "3.2",
           "3.16"
         ],
-        "po": []
+        "po": ["A1", "C2"]
       },
       {
         "text": "Apply clinical skills and nursing procedures in simulated practice settings",
@@ -362,7 +362,7 @@
           "6.5",
           "6.6"
         ],
-        "po": []
+        "po": ["C1", "C5"]
       },
       {
         "text": "Demonstrate professional values and accountability appropriate to a student nurse on simulated placement",
@@ -377,7 +377,7 @@
           "6.11",
           "6.12"
         ],
-        "po": []
+        "po": ["B7", "D2"]
       }
     ]
   },
@@ -421,7 +421,7 @@
           "1.12",
           "7.2"
         ],
-        "po": []
+        "po": ["A2", "A1"]
       },
       {
         "text": "Critically analyse the values, ethics and regulatory frameworks that underpin professional nursing identity",
@@ -437,7 +437,7 @@
           "6.10",
           "7.9"
         ],
-        "po": []
+        "po": ["B1", "B7"]
       },
       {
         "text": "Demonstrate person-centred, values-based care in interactions with patients, families and colleagues",
@@ -450,7 +450,7 @@
           "1.11",
           "4.4"
         ],
-        "po": []
+        "po": ["C2", "C1"]
       },
       {
         "text": "Demonstrate personal integrity, ethical conduct and cultural competence as an emerging nursing professional",
@@ -462,7 +462,7 @@
           "1.19",
           "6.11"
         ],
-        "po": []
+        "po": ["B7", "D7"]
       }
     ]
   },
@@ -503,7 +503,7 @@
           "1.8",
           "5.1"
         ],
-        "po": []
+        "po": ["A1", "B6"]
       },
       {
         "text": "Demonstrate the ability to reflect analytically on personal development and produce a professional development plan",
@@ -513,7 +513,7 @@
           "1.20",
           "6.8"
         ],
-        "po": []
+        "po": ["B6", "D7"]
       },
       {
         "text": "Demonstrate essential drug dosage calculation competence using the SafeMedicate platform",
@@ -521,7 +521,7 @@
         "nmc": [
           "4.13"
         ],
-        "po": []
+        "po": ["C1"]
       },
       {
         "text": "Demonstrate professional maturity, self-directed learning and effective communication",
@@ -530,7 +530,7 @@
           "1.17",
           "1.20"
         ],
-        "po": []
+        "po": ["D2", "D4", "D7"]
       }
     ]
   },
@@ -565,7 +565,7 @@
           "4.10",
           "4.15"
         ],
-        "po": []
+        "po": ["A5", "A1"]
       },
       {
         "text": "Apply bioscientific knowledge to critically analyse nursing assessment and care planning",
@@ -575,7 +575,7 @@
           "1.9",
           "3.2"
         ],
-        "po": []
+        "po": ["B2", "B4"]
       },
       {
         "text": "Respond proactively to signs of deterioration and apply bioscience knowledge to clinical nursing practice",
@@ -585,7 +585,7 @@
           "3.9",
           "4.10"
         ],
-        "po": []
+        "po": ["C1", "C4"]
       },
       {
         "text": "Demonstrate commitment to applying scientific knowledge to safe, evidence-based nursing practice",
@@ -595,7 +595,7 @@
           "1.18",
           "4.3"
         ],
-        "po": []
+        "po": ["D1", "D3"]
       }
     ]
   },
@@ -632,7 +632,7 @@
           "4.4",
           "4.10"
         ],
-        "po": []
+        "po": ["A3", "A9"]
       },
       {
         "text": "Critically analyse evidence relating to mental health assessment, care planning and therapeutic approaches for CYP",
@@ -648,7 +648,7 @@
           "4.4",
           "4.14"
         ],
-        "po": []
+        "po": ["B1", "B2", "B3"]
       },
       {
         "text": "Demonstrate the knowledge and skills to support CYP with mental health challenges in practice",
@@ -667,7 +667,7 @@
           "6.5",
           "7.1"
         ],
-        "po": []
+        "po": ["C1", "C2", "C3"]
       },
       {
         "text": "Demonstrate cultural competence, advocacy and collaborative working in the context of CYP mental health",
@@ -683,7 +683,7 @@
           "4.3",
           "7.8"
         ],
-        "po": []
+        "po": ["B7", "D6", "D8"]
       }
     ]
   },
@@ -746,7 +746,7 @@
           "4.18",
           "7.4"
         ],
-        "po": []
+        "po": ["A1", "A3", "A5"]
       },
       {
         "text": "Critically analyse evidence to inform nursing interventions for people with complex care needs",
@@ -756,7 +756,7 @@
           "1.2",
           "2.9"
         ],
-        "po": []
+        "po": ["B1", "B2", "B3"]
       },
       {
         "text": "Demonstrate the knowledge and skills to provide evidence-based nursing care including nutrition, hydration, skin integrity, symptom management and discharge planning",
@@ -770,7 +770,7 @@
           "4.11",
           "4.18"
         ],
-        "po": []
+        "po": ["C1", "C3", "C4"]
       },
       {
         "text": "Work effectively in teams, demonstrate professional values and contribute to the interdisciplinary care of people",
@@ -779,7 +779,7 @@
           "1.18",
           "2.9"
         ],
-        "po": []
+        "po": ["B7", "D6"]
       }
     ]
   },
@@ -842,7 +842,7 @@
           "4.18",
           "7.4"
         ],
-        "po": []
+        "po": ["A1", "A3", "A5"]
       },
       {
         "text": "Critically analyse evidence to inform nursing interventions for people with complex care needs",
@@ -852,7 +852,7 @@
           "1.2",
           "2.9"
         ],
-        "po": []
+        "po": ["B1", "B2", "B3"]
       },
       {
         "text": "Demonstrate the knowledge and skills to provide evidence-based nursing care including nutrition, hydration, skin integrity, symptom management and discharge planning",
@@ -866,7 +866,7 @@
           "4.11",
           "4.18"
         ],
-        "po": []
+        "po": ["C1", "C3", "C4"]
       },
       {
         "text": "Work effectively in teams, demonstrate professional values and contribute to the interdisciplinary care of people",
@@ -875,7 +875,7 @@
           "1.18",
           "2.9"
         ],
-        "po": []
+        "po": ["B7", "D6"]
       }
     ]
   },
@@ -913,7 +913,7 @@
           "3.3",
           "4.10"
         ],
-        "po": []
+        "po": ["A2", "A9"]
       },
       {
         "text": "Critically evaluate creative and empowering approaches to dementia care within the evidence base",
@@ -932,7 +932,7 @@
           "3.4",
           "4.8"
         ],
-        "po": []
+        "po": ["B1", "B3"]
       },
       {
         "text": "Demonstrate the knowledge and skills to provide person-centred, creative and compassionate care for people living with dementia",
@@ -940,13 +940,13 @@
         "nmc": [
           "1.13"
         ],
-        "po": []
+        "po": ["C1", "C2"]
       },
       {
         "text": "Demonstrate empathy, cultural competence and advocacy in dementia care",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
-        "po": [],
+        "po": ["B7", "D8"],
         "flag_missing_nmc": true
       }
     ]
@@ -979,7 +979,7 @@
           "4.8",
           "4.10"
         ],
-        "po": []
+        "po": ["A1", "A5"]
       },
       {
         "text": "Critically evaluate the evidence base underpinning nursing assessment and care in critical care environments",
@@ -991,1394 +991,30 @@
           "3.7",
           "5.4"
         ],
-        "po": []
+        "po": ["B1", "B3"]
       },
       {
         "text": "Demonstrate the knowledge and skills required for nursing care in a critical care context",
         "category": "Practical Skills",
         "nmc": [
           "1.2",
-          "1.14",
-          "3.5",
-          "4.8",
-          "4.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Reflect on professional practice in critical care and demonstrate commitment to high standards of patient safety",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.7",
-          "1.10",
-          "1.17"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23122",
-    "title": "Palliative and End of Life Care",
-    "year": 2,
-    "level": 5,
-    "credits": 10,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": true,
-    "assessments": [
-      {
-        "type": "Oral presentation",
-        "length": "10 mins",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of palliative care philosophy, end of life care needs and the ethical and legal frameworks underpinning this area of practice",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "3.12",
-          "4.9",
-          "7.1",
-          "7.5",
-          "7.6",
-          "7.8"
-        ],
-        "po": []
-      },
-      {
-        "text": "Critically analyse the evidence base for palliative and end of life nursing interventions",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.9",
-          "1.17"
-        ],
-        "po": []
-      },
-      {
-        "text": "Communicate effectively with dying patients, their families and carers in end of life care situations",
-        "category": "Practical Skills",
-        "nmc": [
-          "1.11",
-          "4.9",
-          "AnnexeA"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate advocacy, compassion and cultural sensitivity in palliative care practice",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.9",
-          "7.8"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23131",
-    "title": "Introduction to Neonatal Low Dependency Care",
-    "year": 2,
-    "level": 5,
-    "credits": 10,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": true,
-    "assessments": [
-      {
-        "type": "Open book examination",
-        "length": "1 hour",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of neonatal anatomy, physiology, development and the care needs of neonates requiring low dependency care",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "3.1",
-          "3.3"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply bioscientific and clinical knowledge to the assessment and planning of care for neonates",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "7.2",
-          "7.3"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate the knowledge and skills required to care for neonates in a low dependency setting",
-        "category": "Practical Skills",
-        "nmc": [
-          "4.12",
-          "AnnexeB"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate family-centred care principles and advocacy for neonates and their families",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.7"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23141",
-    "title": "Year 2 Clinical Placement 1",
-    "year": 2,
-    "level": 5,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Apply legal, regulatory and ethical frameworks; challenge discriminatory behaviour; understand health promotion, screening, childhood experiences, social determinants and behaviour change; apply knowledge of health conditions to assessment, consent, care planning and referral",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "1.2",
-          "1.4",
-          "2.5",
-          "2.6",
-          "2.7",
-          "2.8",
-          "2.11",
-          "3.3",
-          "3.4",
-          "3.5",
-          "3.6",
-          "3.7",
-          "3.10",
-          "3.12",
-          "3.13",
-          "3.14"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply the duty of candour, recognise and report poor care; demonstrate resilience and emotional intelligence in clinical decision-making",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.3",
-          "1.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Provide person-centred care including shared decision-making, information provision, symptom management, nutrition, skin integrity, end of life care, medicines management and discharge planning",
-        "category": "Practical Skills",
-        "nmc": [
-          "4.2",
-          "4.3",
-          "4.4",
-          "4.5",
-          "4.6",
-          "4.7",
-          "4.8",
-          "4.9",
-          "4.10",
-          "4.11",
-          "4.13",
-          "4.14",
-          "4.15",
-          "4.16",
-          "4.17"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply critical thinking; maintain accurate records; contribute to interdisciplinary team; promote healthy behaviours; use strength-based communication approaches",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.8",
-          "1.16",
-          "1.18",
-          "2.4",
-          "2.9"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23132",
-    "title": "Year 2 Clinical Placement 2",
-    "year": 2,
-    "level": 5,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Apply legal, regulatory and ethical frameworks; challenge discriminatory behaviour; understand health promotion, screening, childhood experiences, social determinants and behaviour change; apply knowledge of health conditions to assessment, consent, care planning and referral",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "1.2",
-          "1.4",
-          "2.5",
-          "2.6",
-          "2.7",
-          "2.8",
-          "2.11",
-          "3.3",
-          "3.4",
-          "3.5",
-          "3.6",
-          "3.7",
-          "3.10",
-          "3.12",
-          "3.13",
-          "3.14"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply the duty of candour, recognise and report poor care; demonstrate resilience and emotional intelligence in clinical decision-making",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.3",
-          "1.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Provide person-centred care including shared decision-making, information provision, symptom management, nutrition, skin integrity, end of life care, medicines management and discharge planning",
-        "category": "Practical Skills",
-        "nmc": [
-          "4.2",
-          "4.3",
-          "4.4",
-          "4.5",
-          "4.6",
-          "4.7",
-          "4.8",
-          "4.9",
-          "4.10",
-          "4.11",
-          "4.13",
-          "4.14",
-          "4.15",
-          "4.16",
-          "4.17"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply critical thinking; maintain accurate records; contribute to interdisciplinary team; promote healthy behaviours; use strength-based communication approaches",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.8",
-          "1.16",
-          "1.18",
-          "2.4",
-          "2.9"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23142",
-    "title": "Year 2 Clinical Placement 3",
-    "year": 2,
-    "level": 5,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Understand health inequalities, epidemiology, global health and social determinants; apply knowledge of human development and body systems to assessment and referral; demonstrate pharmacology and medicines knowledge",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "2.1",
-          "2.2",
-          "2.3",
-          "3.1",
           "3.2",
-          "3.14",
-          "4.10",
-          "4.12",
-          "4.13",
-          "4.14",
-          "4.15",
-          "7.1",
-          "7.2",
-          "7.3",
-          "7.4"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply evidence-based care for mobility, nutrition, skin integrity and symptom management; demonstrate leadership principles and digital information management in practice",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "4.6",
-          "4.7",
-          "4.8",
-          "5.1",
-          "5.2",
-          "5.4",
-          "5.6",
-          "5.11",
-          "5.12"
-        ],
-        "po": []
-      },
-      {
-        "text": "Assess capacity and consent; interpret investigations; undertake risk assessments; respond to deterioration including BLS",
-        "category": "Practical Skills",
-        "nmc": [
-          "3.6",
-          "3.7",
           "3.9",
-          "3.10",
-          "6.5",
-          "6.6",
-          "6.10",
+          "4.10",
+          "4.11",
+          "4.12"
+        ],
+        "po": ["C1", "C3", "C5"]
+      },
+      {
+        "text": "Demonstrate professional accountability, working collaboratively in complex clinical situations and respond to emergencies",
+        "category": "Transferable Skills and Personal Qualities",
+        "nmc": [
+          "1.18",
+          "5.5",
           "6.11"
         ],
-        "po": []
-      },
-      {
-        "text": "Act in accordance with The Code; challenge discrimination; apply critical thinking; maintain relationships and records; act as professional ambassador",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.1",
-          "1.4",
-          "1.8",
-          "1.9",
-          "1.10",
-          "1.11",
-          "1.13",
-          "1.14",
-          "1.16",
-          "1.19"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23151",
-    "title": "Negotiated Study",
-    "year": 2,
-    "level": 5,
-    "credits": 10,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": true,
-    "assessments": [
-      {
-        "type": "Negotiable assessment",
-        "length": "2500 words",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of a self-selected topic of relevance to the nursing programme",
-        "category": "Knowledge and Understanding",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Critically review the academic literature relating to the chosen topic of study",
-        "category": "Intellectual Skills",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Produce independent work for assessment reflecting engagement with relevant literature and subject context",
-        "category": "Practical Skills",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Demonstrate skills and aptitude to successfully undertake independent academic study",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      }
-    ]
-  },
-  {
-    "code": "NURS23162",
-    "title": "Voices in Care: Doing Experience Driven Research",
-    "year": 2,
-    "level": 5,
-    "credits": 10,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": true,
-    "assessments": [
-      {
-        "type": "Research report (qualitative project in academic paper format with reflective account)",
-        "length": "2000 words",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate critical understanding of qualitative research approaches, ethical issues and theoretical perspectives in qualitative research",
-        "category": "Knowledge and Understanding",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Critically evaluate qualitative research methods, rigour, analytical techniques and underpinning evidence",
-        "category": "Intellectual Skills",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Demonstrate ability to undertake and apply appropriate standards to a small, low-risk qualitative research project",
-        "category": "Practical Skills",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Reflect on own knowledge and skills in qualitative research; demonstrate understanding of research limitations; participate in collaborative learning",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      }
-    ]
-  },
-  {
-    "code": "NURS23180",
-    "title": "BNurs Year 2 Professional Development",
-    "year": 2,
-    "level": 5,
-    "credits": 0,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "SafeMedicate (advanced skills)",
-        "length": "1 hour",
-        "summative": true,
-        "weight": 50
-      },
-      {
-        "type": "Portfolio (3 reflections, SWOT, PDP, field exposure)",
-        "length": "",
-        "summative": true,
-        "weight": 50
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate analytical understanding of contemporary nursing practice, reflective practice theory and the emerging role of the nurse; calculate complex drug dosages by bodyweight and body surface area",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "1.1",
-          "1.17",
-          "1.20"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate analytical reflection on personal development, identifying strengths and opportunities as an emerging leader, researcher, educator and clinician",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.17",
-          "1.20"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate initiative and autonomy in portfolio development; demonstrate medication measurement skills",
-        "category": "Practical Skills",
-        "nmc": [
-          "4.13",
-          "4.16"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate effective communication, independent study management, reflective practice and exposure to diverse fields of nursing",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.17",
-          "1.20"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS23312",
-    "title": "Negotiated Study Semester 2",
-    "year": 2,
-    "level": 5,
-    "credits": 10,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": true,
-    "assessments": [
-      {
-        "type": "Negotiable assessment",
-        "length": "2500 words",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of a self-selected topic of relevance to the nursing programme",
-        "category": "Knowledge and Understanding",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Critically review the academic literature relating to the chosen topic of study",
-        "category": "Intellectual Skills",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Produce independent work for assessment reflecting engagement with relevant literature and broader subject context",
-        "category": "Practical Skills",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      },
-      {
-        "text": "Demonstrate skills and aptitude to successfully undertake independent academic study",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [],
-        "po": [],
-        "flag_missing_nmc": true
-      }
-    ]
-  },
-  {
-    "code": "NURS31301",
-    "title": "Nurse as Facilitator of Learning",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Observed teaching session and critical reflection",
-        "length": "2500 words",
-        "summative": true,
-        "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2,
-          3
-        ]
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of health education, health literacy, behaviour change and the evidence base for teaching and supporting patients, students and colleagues",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "2.8",
-          "2.9",
-          "2.10",
-          "5.6",
-          "5.10",
-          "7.2"
-        ],
-        "po": []
-      },
-      {
-        "text": "Critically evaluate approaches to facilitating learning, supervising students and providing feedback in nursing practice",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "2.4",
-          "2.7",
-          "2.9",
-          "2.10",
-          "5.9",
-          "5.11"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate effective teaching, supervision and assessment of students and the facilitation of peer learning",
-        "category": "Practical Skills",
-        "nmc": [
-          "2.7",
-          "2.9",
-          "2.10",
-          "5.4",
-          "5.6",
-          "5.8",
-          "5.9",
-          "7.1"
-        ],
-        "po": []
-      },
-      {
-        "text": "Model professional values and continued learning as a facilitator of nursing education",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.5",
-          "1.8",
-          "1.13",
-          "1.15",
-          "1.17",
-          "5.4",
-          "5.6",
-          "5.8",
-          "5.11"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31311",
-    "title": "Year 3 Clinical Placement 1",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Understand leadership, management, team dynamics, performance management, roles in the interdisciplinary team, health and social care policy, health economics, and the challenges of complex care and co-morbidities",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "5.1",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.12",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.11",
-          "6.12",
-          "7.2",
-          "7.3",
-          "7.4",
-          "7.5",
-          "7.6",
-          "7.7",
-          "7.8",
-          "7.9",
-          "7.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "5.9",
-          "7.13"
-        ],
-        "po": []
-      },
-      {
-        "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
-        "category": "Practical Skills",
-        "nmc": [
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.10",
-          "5.11",
-          "6.4",
-          "6.5",
-          "6.6",
-          "6.7",
-          "6.8",
-          "6.9",
-          "6.10",
-          "7.11"
-        ],
-        "po": []
-      },
-      {
-        "text": "Use digital technologies effectively; apply partnership and interagency working; understand business case processes for care funding",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "7.1",
-          "7.12"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31312",
-    "title": "Year 3 Clinical Placement 2",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Understand leadership, management, team dynamics, performance management, roles in the interdisciplinary team, health and social care policy, health economics, and the challenges of complex care and co-morbidities",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "5.1",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.12",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.11",
-          "6.12",
-          "7.2",
-          "7.3",
-          "7.4",
-          "7.5",
-          "7.6",
-          "7.7",
-          "7.8",
-          "7.9",
-          "7.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "5.9",
-          "7.13"
-        ],
-        "po": []
-      },
-      {
-        "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
-        "category": "Practical Skills",
-        "nmc": [
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.10",
-          "6.4",
-          "6.5",
-          "6.6",
-          "6.7",
-          "6.8",
-          "6.9",
-          "6.10",
-          "7.11"
-        ],
-        "po": []
-      },
-      {
-        "text": "Use digital technologies effectively; apply partnership and interagency working; demonstrate professional accountability and commitment to continuous improvement",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "5.11",
-          "7.1",
-          "7.12"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31322",
-    "title": "Year 3 Clinical Placement 3",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Understand leadership, management, team dynamics, performance management, roles in the interdisciplinary team, health and social care policy, health economics, and the challenges of complex care and co-morbidities",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "5.1",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.12",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.11",
-          "6.12",
-          "7.2",
-          "7.3",
-          "7.4",
-          "7.5",
-          "7.6",
-          "7.7",
-          "7.8",
-          "7.9",
-          "7.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "5.9",
-          "7.13"
-        ],
-        "po": []
-      },
-      {
-        "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
-        "category": "Practical Skills",
-        "nmc": [
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.10",
-          "6.4",
-          "6.5",
-          "6.6",
-          "6.7",
-          "6.8",
-          "6.9",
-          "6.10",
-          "7.11"
-        ],
-        "po": []
-      },
-      {
-        "text": "Use digital technologies effectively; apply partnership and interagency working; demonstrate professional accountability and commitment to continuous improvement",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "5.11",
-          "7.1",
-          "7.12"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31342",
-    "title": "Advancing Care: Social and Political Context",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Written assignment",
-        "length": "2500 words",
-        "summative": true,
-        "weight": 100
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of the social, political and policy contexts that shape nursing practice and health care delivery",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "2.2",
-          "2.7",
-          "2.10",
-          "7.2",
-          "7.4"
-        ],
-        "po": []
-      },
-      {
-        "text": "Critically analyse the impact of health policy, social inequalities and political processes on nursing practice and patient outcomes",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.7",
-          "1.8",
-          "7.2",
-          "7.4"
-        ],
-        "po": []
-      },
-      {
-        "text": "Apply understanding of health policy and social context to advocate for patients and communities in nursing practice",
-        "category": "Practical Skills",
-        "nmc": [
-          "2.9",
-          "7.9"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate political awareness and the ability to engage with policy processes as an emerging nursing professional",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.2",
-          "7.13"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31360",
-    "title": "Nurse as Inquirer of Clinical Evidence (NICE)",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Critical annotated bibliography",
-        "length": "3000 words",
-        "summative": true,
-        "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2,
-          3
-        ]
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of research methodology, evidence hierarchies and the application of research to nursing practice",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "1.1",
-          "1.2",
-          "1.7"
-        ],
-        "po": []
-      },
-      {
-        "text": "Critically appraise and synthesise a body of research evidence relevant to a nursing inquiry question",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.7",
-          "1.8",
-          "1.20"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate advanced research literacy through the production of a critical annotated bibliography",
-        "category": "Practical Skills",
-        "nmc": [
-          "1.7",
-          "1.8",
-          "1.20"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate commitment to using evidence to improve nursing practice and patient outcomes",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.7",
-          "1.15",
-          "1.16"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31361",
-    "title": "Nurse as Leader, Manager and Coordinator of Care",
-    "year": 3,
-    "level": 6,
-    "credits": 20,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "Written assignment (reflective with personal development plan)",
-        "length": "2500 words",
-        "summative": true,
-        "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2,
-          3
-        ]
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Understand principles of leadership, management and team dynamics; demonstrate person and team management; apply evidence-based approaches for communication and interdisciplinary working; understand health economics and policy impact on care",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "1.1",
-          "1.2",
-          "1.5",
-          "1.8",
-          "1.9",
-          "1.10",
-          "1.11",
-          "1.13",
-          "1.14",
-          "1.18",
-          "2.1",
-          "2.5",
-          "4.1",
-          "4.2",
-          "5.1",
-          "7.2",
-          "7.3",
-          "7.4"
-        ],
-        "po": []
-      },
-      {
-        "text": "Understand roles in the interdisciplinary team; apply performance management; monitor quality; understand mechanisms for influencing policy; contribute to supervision and team reflection; exhibit leadership potential",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.9",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.7",
-          "5.9",
-          "5.10",
-          "5.12",
-          "6.4",
-          "6.7",
-          "7.1"
-        ],
-        "po": []
-      },
-      {
-        "text": "Use digital technologies; facilitate safe discharge and care transition; lead and manage nursing care; facilitate equitable access; identify and manage risks; identify and reflect on critical incidents",
-        "category": "Practical Skills",
-        "nmc": [
-          "1.2",
-          "1.3",
-          "1.4",
-          "1.12",
-          "4.2",
-          "5.5",
-          "5.6",
-          "5.8",
-          "5.11",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.5",
-          "6.6",
-          "6.8",
-          "6.10",
-          "6.11",
-          "6.12",
-          "7.5",
-          "7.9",
-          "7.10",
-          "7.11",
-          "7.12"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate enhanced IT skills, communication with diverse people, team working and facilitation skills to promote patient safety",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "5.2",
-          "6.7",
-          "7.13",
-          "1.4",
-          "1.14"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS31380",
-    "title": "BNurs Year 3 Professional Development",
-    "year": 3,
-    "level": 6,
-    "credits": 0,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "SafeMedicate",
-        "length": "",
-        "summative": true,
-        "weight": 50
-      },
-      {
-        "type": "Portfolio",
-        "length": "",
-        "summative": true,
-        "weight": 50
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate understanding of the professional role of a registered nurse, professional development and reflective practice at the point of registration",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "1.1",
-          "1.17",
-          "1.20"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate analytical reflection on personal and professional development as an emerging registered nurse",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.17",
-          "1.19"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate fitness to practise and professional accountability through portfolio completion",
-        "category": "Practical Skills",
-        "nmc": [
-          "1.1",
-          "1.20",
-          "4.13",
-          "4.16"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate readiness for registration and commitment to lifelong professional development",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.19",
-          "1.20"
-        ],
-        "po": []
-      }
-    ]
-  },
-  {
-    "code": "NURS41012",
-    "title": "Nurse Educator in Practice",
-    "year": 4,
-    "level": 7,
-    "credits": 15,
-    "fields": [
-      "Adult",
-      "MH",
-      "CYP"
-    ],
-    "discovery": false,
-    "assessments": [
-      {
-        "type": "In-person presentation",
-        "summative": true,
-        "weight": 100,
-        "assesses_outcomes": [
-          0,
-          1,
-          2,
-          3
-        ]
-      }
-    ],
-    "outcomes": [
-      {
-        "text": "Demonstrate knowledge and understanding of how practice learning is organised; teaching, learning and assessment theories; roles of practice supervisors and assessors; factors influencing student integration; learning culture and public safety; and systems for educational governance and quality",
-        "category": "Knowledge and Understanding",
-        "nmc": [
-          "2.8",
-          "2.10",
-          "5.4",
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.9",
-          "5.10",
-          "5.12",
-          "6.1",
-          "6.3"
-        ],
-        "po": []
-      },
-      {
-        "text": "Critically appreciate political and professional issues in nurse education; demonstrate critical evaluation, synthesis and originality in applying evidence; draw reasoned conclusions and engage with advanced scholarship; act with professional integrity in achievement of NMC (2018) standards",
-        "category": "Intellectual Skills",
-        "nmc": [
-          "1.7",
-          "1.16",
-          "1.17",
-          "1.18",
-          "5.12",
-          "7.2",
-          "7.3"
-        ],
-        "po": []
-      },
-      {
-        "text": "Demonstrate interpersonal communication skills for student learning and assessment; prioritise and adapt to personalised learning needs; provide objective, evidence-based supervision and constructive feedback; design formal and informal educational experiences; critically reflect on own development as practitioner, supervisor and educator",
-        "category": "Practical Skills",
-        "nmc": [
-          "1.15",
-          "5.4",
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.9",
-          "5.10"
-        ],
-        "po": []
-      },
-      {
-        "text": "Act as a professional role model; exercise initiative and academic curiosity for CPD and scholarly output; manage independent study and professional practice demands; use information technology effectively; demonstrate accomplished communication; work co-operatively as a member of a team",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "1.7",
-          "1.8",
-          "1.15",
-          "1.16",
-          "5.2",
-          "5.11"
-        ],
-        "po": []
+        "po": ["B7", "D6"]
       }
     ]
   }
