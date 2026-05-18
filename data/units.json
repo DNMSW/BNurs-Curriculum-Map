@@ -14,10 +14,15 @@
     "assessments": [
       {
         "type": "Collaborative presentation",
-        "length": "15\u201318 mins",
+        "length": "15–18 mins",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -34,7 +39,10 @@
           "7.2",
           "7.4"
         ],
-        "po": []
+        "po": [
+          "A3",
+          "A4"
+        ]
       },
       {
         "text": "Critically evaluate evidence underpinning public health approaches and their application to nursing practice",
@@ -48,7 +56,10 @@
           "7.3",
           "7.6"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B3"
+        ]
       },
       {
         "text": "Communicate effectively with peers in a collaborative group presentation setting",
@@ -58,7 +69,11 @@
           "AnnexeA",
           "7.1"
         ],
-        "po": []
+        "po": [
+          "C2",
+          "D4",
+          "D5"
+        ]
       },
       {
         "text": "Demonstrate awareness of professional responsibilities, ethical considerations and societal influences in public health nursing",
@@ -68,7 +83,10 @@
           "2.12",
           "7.13"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D6"
+        ]
       }
     ]
   },
@@ -90,7 +108,12 @@
         "length": "2 hours",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -103,7 +126,9 @@
           "3.2",
           "7.5"
         ],
-        "po": []
+        "po": [
+          "A5"
+        ]
       },
       {
         "text": "Apply understanding of homeostasis, pathophysiology and biosciences to the assessment of nursing care needs",
@@ -115,7 +140,10 @@
           "3.10",
           "4.15"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B2"
+        ]
       },
       {
         "text": "Use anatomical and physiological knowledge to underpin clinical decision-making",
@@ -126,7 +154,9 @@
           "4.16",
           "4.18"
         ],
-        "po": []
+        "po": [
+          "C4"
+        ]
       },
       {
         "text": "Demonstrate commitment to building and maintaining scientific knowledge as a foundation for evidence-based nursing",
@@ -135,7 +165,10 @@
           "3.1",
           "1.7"
         ],
-        "po": []
+        "po": [
+          "D1",
+          "D3"
+        ]
       }
     ]
   },
@@ -157,7 +190,12 @@
         "length": "1.5 hours",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -171,7 +209,9 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": [
+          "A8"
+        ]
       },
       {
         "text": "Critically appraise research evidence and apply findings to inform nursing care and clinical decision-making",
@@ -183,7 +223,10 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B3"
+        ]
       },
       {
         "text": "Apply evidence-based knowledge to the care of people with commonly encountered physical health conditions",
@@ -195,7 +238,9 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": [
+          "C4"
+        ]
       },
       {
         "text": "Commit to lifelong learning and keeping knowledge and skills up to date through engagement with evidence",
@@ -207,7 +252,10 @@
           "4.7",
           "1.8"
         ],
-        "po": []
+        "po": [
+          "D1",
+          "D3"
+        ]
       }
     ]
   },
@@ -230,7 +278,12 @@
         "length": "Not specified",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -247,7 +300,10 @@
           "3.13",
           "4.9"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "C3"
+        ]
       },
       {
         "text": "Apply collaborative and interprofessional working principles to nursing care planning",
@@ -261,7 +317,10 @@
           "3.15",
           "3.16"
         ],
-        "po": []
+        "po": [
+          "B2",
+          "B4"
+        ]
       },
       {
         "text": "Demonstrate person-centred communication and collaborative care planning skills",
@@ -274,7 +333,11 @@
           "4.17",
           "7.1"
         ],
-        "po": []
+        "po": [
+          "C2",
+          "C3",
+          "C4"
+        ]
       },
       {
         "text": "Work effectively with others and demonstrate professional accountability in the care planning process",
@@ -286,7 +349,10 @@
           "5.4",
           "7.8"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D6"
+        ]
       }
     ]
   },
@@ -308,14 +374,22 @@
         "length": "",
         "summative": true,
         "weight": 50,
-        "assesses_outcomes": [0, 1, 2]
+        "assesses_outcomes": [
+          0,
+          1,
+          2
+        ]
       },
       {
         "type": "Mandatory training attendance (BLS, IPC, Moving and Handling)",
         "length": "",
         "summative": true,
         "weight": 50,
-        "assesses_outcomes": [0, 1, 2]
+        "assesses_outcomes": [
+          0,
+          1,
+          2
+        ]
       }
     ],
     "outcomes": [
@@ -336,7 +410,10 @@
           "3.2",
           "3.16"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "C2"
+        ]
       },
       {
         "text": "Apply clinical skills and nursing procedures in simulated practice settings",
@@ -357,7 +434,10 @@
           "6.5",
           "6.6"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C5"
+        ]
       },
       {
         "text": "Demonstrate professional values and accountability appropriate to a student nurse on simulated placement",
@@ -372,7 +452,10 @@
           "6.11",
           "6.12"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D2"
+        ]
       }
     ]
   },
@@ -416,7 +499,10 @@
           "1.12",
           "7.2"
         ],
-        "po": []
+        "po": [
+          "A2",
+          "A1"
+        ]
       },
       {
         "text": "Critically analyse the values, ethics and regulatory frameworks that underpin professional nursing identity",
@@ -432,7 +518,10 @@
           "6.10",
           "7.9"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B7"
+        ]
       },
       {
         "text": "Demonstrate person-centred, values-based care in interactions with patients, families and colleagues",
@@ -445,7 +534,10 @@
           "1.11",
           "4.4"
         ],
-        "po": []
+        "po": [
+          "C2",
+          "C1"
+        ]
       },
       {
         "text": "Demonstrate personal integrity, ethical conduct and cultural competence as an emerging nursing professional",
@@ -457,7 +549,10 @@
           "1.19",
           "6.11"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D7"
+        ]
       }
     ]
   },
@@ -479,14 +574,21 @@
         "length": "1 hour",
         "summative": true,
         "pass_fail": true,
-        "assesses_outcomes": [2]
+        "assesses_outcomes": [
+          2
+        ]
       },
       {
         "type": "Portfolio (3 reflections, SWOT, PDP, other-field exposure)",
         "length": "",
         "summative": true,
         "pass_fail": true,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -500,7 +602,10 @@
           "1.8",
           "5.1"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "B6"
+        ]
       },
       {
         "text": "Demonstrate the ability to reflect analytically on personal development and produce a professional development plan",
@@ -510,7 +615,10 @@
           "1.20",
           "6.8"
         ],
-        "po": []
+        "po": [
+          "B6",
+          "D7"
+        ]
       },
       {
         "text": "Demonstrate essential drug dosage calculation competence using the SafeMedicate platform",
@@ -518,7 +626,9 @@
         "nmc": [
           "4.13"
         ],
-        "po": []
+        "po": [
+          "C1"
+        ]
       },
       {
         "text": "Demonstrate professional maturity, self-directed learning and effective communication",
@@ -527,7 +637,11 @@
           "1.17",
           "1.20"
         ],
-        "po": []
+        "po": [
+          "D2",
+          "D4",
+          "D7"
+        ]
       }
     ]
   },
@@ -549,7 +663,12 @@
         "length": "2 hours",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -563,7 +682,10 @@
           "4.10",
           "4.15"
         ],
-        "po": []
+        "po": [
+          "A5",
+          "A1"
+        ]
       },
       {
         "text": "Apply bioscientific knowledge to critically analyse nursing assessment and care planning",
@@ -573,7 +695,10 @@
           "1.9",
           "3.2"
         ],
-        "po": []
+        "po": [
+          "B2",
+          "B4"
+        ]
       },
       {
         "text": "Respond proactively to signs of deterioration and apply bioscience knowledge to clinical nursing practice",
@@ -583,7 +708,10 @@
           "3.9",
           "4.10"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C4"
+        ]
       },
       {
         "text": "Demonstrate commitment to applying scientific knowledge to safe, evidence-based nursing practice",
@@ -593,7 +721,10 @@
           "1.18",
           "4.3"
         ],
-        "po": []
+        "po": [
+          "D1",
+          "D3"
+        ]
       }
     ]
   },
@@ -615,7 +746,12 @@
         "length": "2000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -631,7 +767,10 @@
           "4.4",
           "4.10"
         ],
-        "po": []
+        "po": [
+          "A3",
+          "A9"
+        ]
       },
       {
         "text": "Critically analyse evidence relating to mental health assessment, care planning and therapeutic approaches for CYP",
@@ -647,7 +786,11 @@
           "4.4",
           "4.14"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B2",
+          "B3"
+        ]
       },
       {
         "text": "Demonstrate the knowledge and skills to support CYP with mental health challenges in practice",
@@ -666,7 +809,11 @@
           "6.5",
           "7.1"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C2",
+          "C3"
+        ]
       },
       {
         "text": "Demonstrate cultural competence, advocacy and collaborative working in the context of CYP mental health",
@@ -682,7 +829,11 @@
           "4.3",
           "7.8"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D6",
+          "D8"
+        ]
       }
     ]
   },
@@ -704,7 +855,12 @@
         "length": "3000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -741,7 +897,11 @@
           "4.18",
           "7.4"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "A3",
+          "A5"
+        ]
       },
       {
         "text": "Critically analyse evidence to inform nursing interventions for people with complex care needs",
@@ -751,7 +911,11 @@
           "1.2",
           "2.9"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B2",
+          "B3"
+        ]
       },
       {
         "text": "Demonstrate the knowledge and skills to provide evidence-based nursing care including nutrition, hydration, skin integrity, symptom management and discharge planning",
@@ -765,7 +929,11 @@
           "4.11",
           "4.18"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C3",
+          "C4"
+        ]
       },
       {
         "text": "Work effectively in teams, demonstrate professional values and contribute to the interdisciplinary care of people",
@@ -774,7 +942,10 @@
           "1.18",
           "2.9"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D6"
+        ]
       }
     ]
   },
@@ -796,7 +967,12 @@
         "length": "3000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -833,7 +1009,11 @@
           "4.18",
           "7.4"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "A3",
+          "A5"
+        ]
       },
       {
         "text": "Critically analyse evidence to inform nursing interventions for people with complex care needs",
@@ -843,7 +1023,11 @@
           "1.2",
           "2.9"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B2",
+          "B3"
+        ]
       },
       {
         "text": "Demonstrate the knowledge and skills to provide evidence-based nursing care including nutrition, hydration, skin integrity, symptom management and discharge planning",
@@ -857,7 +1041,11 @@
           "4.11",
           "4.18"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C3",
+          "C4"
+        ]
       },
       {
         "text": "Work effectively in teams, demonstrate professional values and contribute to the interdisciplinary care of people",
@@ -866,7 +1054,10 @@
           "1.18",
           "2.9"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D6"
+        ]
       }
     ]
   },
@@ -887,7 +1078,12 @@
         "length": "2500 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -905,7 +1101,10 @@
           "3.3",
           "4.10"
         ],
-        "po": []
+        "po": [
+          "A2",
+          "A9"
+        ]
       },
       {
         "text": "Critically evaluate creative and empowering approaches to dementia care within the evidence base",
@@ -924,7 +1123,10 @@
           "3.4",
           "4.8"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B3"
+        ]
       },
       {
         "text": "Demonstrate the knowledge and skills to provide person-centred, creative and compassionate care for people living with dementia",
@@ -932,13 +1134,19 @@
         "nmc": [
           "1.13"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C2"
+        ]
       },
       {
         "text": "Demonstrate empathy, cultural competence and advocacy in dementia care",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
-        "po": [],
+        "po": [
+          "B7",
+          "D8"
+        ],
         "flag_missing_nmc": true
       }
     ]
@@ -959,7 +1167,12 @@
         "length": "2000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -972,7 +1185,10 @@
           "4.8",
           "4.10"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "A5"
+        ]
       },
       {
         "text": "Critically evaluate the evidence base underpinning nursing assessment and care in critical care environments",
@@ -984,7 +1200,10 @@
           "3.7",
           "5.4"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B3"
+        ]
       },
       {
         "text": "Demonstrate the knowledge and skills required for nursing care in a critical care context",
@@ -996,7 +1215,11 @@
           "4.8",
           "4.10"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C3",
+          "C5"
+        ]
       },
       {
         "text": "Reflect on professional practice in critical care and demonstrate commitment to high standards of patient safety",
@@ -1006,7 +1229,10 @@
           "1.10",
           "1.17"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D6"
+        ]
       }
     ]
   },
@@ -1028,7 +1254,12 @@
         "length": "10 mins",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1093,7 +1324,12 @@
         "length": "1 hour",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1152,7 +1388,12 @@
         "length": "",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1242,7 +1483,12 @@
         "length": "",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1332,7 +1578,12 @@
         "length": "",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1426,7 +1677,12 @@
         "length": "2500 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1478,7 +1734,12 @@
         "length": "2000 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1530,14 +1791,21 @@
         "length": "1 hour",
         "summative": true,
         "pass_fail": true,
-        "assesses_outcomes": [2]
+        "assesses_outcomes": [
+          2
+        ]
       },
       {
         "type": "Portfolio (3 reflections, SWOT, PDP, field exposure)",
         "length": "",
         "summative": true,
         "pass_fail": true,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1598,7 +1866,12 @@
         "length": "2500 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1670,7 +1943,11 @@
           "5.10",
           "7.2"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "A3",
+          "B5"
+        ]
       },
       {
         "text": "Critically evaluate approaches to facilitating learning, supervising students and providing feedback in nursing practice",
@@ -1683,7 +1960,11 @@
           "5.9",
           "5.11"
         ],
-        "po": []
+        "po": [
+          "A6",
+          "B5",
+          "B6"
+        ]
       },
       {
         "text": "Demonstrate effective teaching, supervision and assessment of students and the facilitation of peer learning",
@@ -1698,7 +1979,11 @@
           "5.9",
           "7.1"
         ],
-        "po": []
+        "po": [
+          "B5",
+          "B3",
+          "B1"
+        ]
       },
       {
         "text": "Model professional values and continued learning as a facilitator of nursing education",
@@ -1714,7 +1999,12 @@
           "5.8",
           "5.11"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C2",
+          "C6",
+          "B5"
+        ]
       }
     ]
   },
@@ -1736,7 +2026,12 @@
         "length": "",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1764,7 +2059,10 @@
           "7.9",
           "7.10"
         ],
-        "po": []
+        "po": [
+          "A6",
+          "A7"
+        ]
       },
       {
         "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
@@ -1773,7 +2071,10 @@
           "5.9",
           "7.13"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "B5"
+        ]
       },
       {
         "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
@@ -1794,7 +2095,9 @@
           "6.10",
           "7.11"
         ],
-        "po": []
+        "po": [
+          "A6"
+        ]
       },
       {
         "text": "Use digital technologies effectively; apply partnership and interagency working; understand business case processes for care funding",
@@ -1803,7 +2106,10 @@
           "7.1",
           "7.12"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "D6"
+        ]
       }
     ]
   },
@@ -1825,7 +2131,12 @@
         "length": "",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1853,7 +2164,10 @@
           "7.9",
           "7.10"
         ],
-        "po": []
+        "po": [
+          "A6",
+          "A7"
+        ]
       },
       {
         "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
@@ -1862,7 +2176,10 @@
           "5.9",
           "7.13"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "B5"
+        ]
       },
       {
         "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
@@ -1882,7 +2199,10 @@
           "6.10",
           "7.11"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B5"
+        ]
       },
       {
         "text": "Use digital technologies effectively; apply partnership and interagency working; demonstrate professional accountability and commitment to continuous improvement",
@@ -1892,7 +2212,11 @@
           "7.1",
           "7.12"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C4",
+          "C6"
+        ]
       }
     ]
   },
@@ -1914,7 +2238,12 @@
         "length": "",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -1942,7 +2271,10 @@
           "7.9",
           "7.10"
         ],
-        "po": []
+        "po": [
+          "A6",
+          "A7"
+        ]
       },
       {
         "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
@@ -1951,7 +2283,10 @@
           "5.9",
           "7.13"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B5"
+        ]
       },
       {
         "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
@@ -1971,7 +2306,11 @@
           "6.10",
           "7.11"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C4",
+          "C6"
+        ]
       },
       {
         "text": "Use digital technologies effectively; apply partnership and interagency working; demonstrate professional accountability and commitment to continuous improvement",
@@ -1981,7 +2320,10 @@
           "7.1",
           "7.12"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D7"
+        ]
       }
     ]
   },
@@ -2003,7 +2345,12 @@
         "length": "2500 words",
         "summative": true,
         "weight": 100,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -2017,7 +2364,10 @@
           "7.2",
           "7.4"
         ],
-        "po": []
+        "po": [
+          "A3",
+          "A4"
+        ]
       },
       {
         "text": "Critically analyse the impact of health policy, social inequalities and political processes on nursing practice and patient outcomes",
@@ -2028,7 +2378,10 @@
           "7.2",
           "7.4"
         ],
-        "po": []
+        "po": [
+          "A2",
+          "A8"
+        ]
       },
       {
         "text": "Apply understanding of health policy and social context to advocate for patients and communities in nursing practice",
@@ -2037,7 +2390,10 @@
           "2.9",
           "7.9"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B3"
+        ]
       },
       {
         "text": "Demonstrate political awareness and the ability to engage with policy processes as an emerging nursing professional",
@@ -2046,7 +2402,10 @@
           "1.2",
           "7.13"
         ],
-        "po": []
+        "po": [
+          "B2",
+          "B7"
+        ]
       }
     ]
   },
@@ -2085,7 +2444,10 @@
           "1.2",
           "1.7"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "A8"
+        ]
       },
       {
         "text": "Critically appraise and synthesise a body of research evidence relevant to a nursing inquiry question",
@@ -2095,7 +2457,11 @@
           "1.8",
           "1.20"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B3",
+          "B2"
+        ]
       },
       {
         "text": "Demonstrate advanced research literacy through the production of a critical annotated bibliography",
@@ -2105,7 +2471,10 @@
           "1.8",
           "1.20"
         ],
-        "po": []
+        "po": [
+          "C1",
+          "C4"
+        ]
       },
       {
         "text": "Demonstrate commitment to using evidence to improve nursing practice and patient outcomes",
@@ -2115,7 +2484,10 @@
           "1.15",
           "1.16"
         ],
-        "po": []
+        "po": [
+          "B7",
+          "D1"
+        ]
       }
     ]
   },
@@ -2169,7 +2541,10 @@
           "7.3",
           "7.4"
         ],
-        "po": []
+        "po": [
+          "A6",
+          "A7"
+        ]
       },
       {
         "text": "Understand roles in the interdisciplinary team; apply performance management; monitor quality; understand mechanisms for influencing policy; contribute to supervision and team reflection; exhibit leadership potential",
@@ -2187,7 +2562,10 @@
           "6.7",
           "7.1"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "A6"
+        ]
       },
       {
         "text": "Use digital technologies; facilitate safe discharge and care transition; lead and manage nursing care; facilitate equitable access; identify and manage risks; identify and reflect on critical incidents",
@@ -2217,7 +2595,10 @@
           "7.11",
           "7.12"
         ],
-        "po": []
+        "po": [
+          "A2",
+          "A8"
+        ]
       },
       {
         "text": "Demonstrate enhanced IT skills, communication with diverse people, team working and facilitation skills to promote patient safety",
@@ -2229,7 +2610,10 @@
           "1.4",
           "1.14"
         ],
-        "po": []
+        "po": [
+          "B1",
+          "B5"
+        ]
       }
     ]
   },
@@ -2251,14 +2635,23 @@
         "length": "1 hour",
         "summative": true,
         "pass_fail": true,
-        "assesses_outcomes": [0, 1, 2]
+        "assesses_outcomes": [
+          0,
+          1,
+          2
+        ]
       },
       {
         "type": "Portfolio (3 reflections, SWOT, PDP, other-field exposure)",
         "length": "",
         "summative": true,
         "pass_fail": true,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
@@ -2270,7 +2663,10 @@
           "1.17",
           "1.20"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "B6"
+        ]
       },
       {
         "text": "Demonstrate analytical reflection on personal and professional development as an emerging registered nurse",
@@ -2279,7 +2675,10 @@
           "1.17",
           "1.19"
         ],
-        "po": []
+        "po": [
+          "A1",
+          "C1"
+        ]
       },
       {
         "text": "Demonstrate fitness to practise and professional accountability through portfolio completion",
@@ -2290,7 +2689,10 @@
           "4.13",
           "4.16"
         ],
-        "po": []
+        "po": [
+          "B6",
+          "B7"
+        ]
       },
       {
         "text": "Demonstrate readiness for registration and commitment to lifelong professional development",
@@ -2299,7 +2701,10 @@
           "1.19",
           "1.20"
         ],
-        "po": []
+        "po": [
+          "B2",
+          "B4"
+        ]
       }
     ]
   },
@@ -2321,14 +2726,24 @@
         "length": "1000 words (reflection component)",
         "summative": true,
         "weight": 60,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       },
       {
         "type": "Innovation for Practice Education (innovation 'Spark' presentation with 500-word rationale)",
         "length": "500 words",
         "summative": true,
         "weight": 40,
-        "assesses_outcomes": [0, 1, 2, 3]
+        "assesses_outcomes": [
+          0,
+          1,
+          2,
+          3
+        ]
       }
     ],
     "outcomes": [
