@@ -251,6 +251,7 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
 .chip.y1 { background: #e3f0fb; color: #154e78; border: 1px solid #9dcaf0; }
 .chip.y2 { background: #e3f7ec; color: #1a6e3d; border: 1px solid #8dd4aa; }
 .chip.y3 { background: #fdecd8; color: #783d12; border: 1px solid #f4b97b; }
+.chip.y4 { background: #f3e8fb; color: #5a1a6e; border: 1px solid #c49de0; }
 .chip.discovery { font-style: italic; opacity: 0.82; }
 
 /* ── Unit cards ───────────────────────────────────────── */

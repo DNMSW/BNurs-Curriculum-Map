@@ -65,7 +65,7 @@ function getFilteredUnits() {
   });
 }
 
-function ycls(year) { return ['', 'y1', 'y2', 'y3'][year] || ''; }
+function ycls(year) { return ["", "y1", "y2", "y3", "y4"][year] || ''; }
 
 function unitChip(u) {
   const d = u.discovery ? ' discovery' : '';
