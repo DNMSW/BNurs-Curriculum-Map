@@ -20,13 +20,21 @@
 <div class="filter-bar">
   <span class="search-by-label">Search by</span>
   <div class="filter-group">
+    <label>Pathway</label>
+    <div class="btn-group">
+      <button class="filter-btn active" data-filter="pathway" data-value="bnurs">BNurs (3-Year)</button>
+      <button class="filter-btn" data-filter="pathway" data-value="mnurs">MNurs (4-Year)</button>
+    </div>
+  </div>
+  <span class="filter-divider" aria-hidden="true"></span>
+  <div class="filter-group">
     <label>Year of Study</label>
     <div class="btn-group">
       <button class="filter-btn active" data-filter="year" data-value="all">All Years</button>
       <button class="filter-btn" data-filter="year" data-value="1">Year 1</button>
       <button class="filter-btn" data-filter="year" data-value="2">Year 2</button>
       <button class="filter-btn" data-filter="year" data-value="3">Year 3</button>
-      <button class="filter-btn" data-filter="year" data-value="4">Year 4</button>
+      <button class="filter-btn" id="year4-btn" data-filter="year" data-value="4" style="display:none;">Year 4</button>
     </div>
   </div>
   <span class="filter-divider" aria-hidden="true"></span>
