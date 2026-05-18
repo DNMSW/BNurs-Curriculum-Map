@@ -1,0 +1,132 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+collections:
+  - name: modules
+    label: BNurs Curriculum Map
+    label_singular: Module
+    icon: book
+    description: Edit BNurs module information and mapping
+
+    files:
+      - name: year1
+        label: Year 1 Modules
+        file: data/year1.yml
+        fields:
+          - name: modules
+            label: Modules
+            type: list
+            fields:
+
+              - { name: module_name, label: Module name, type: string }
+
+              - name: semester
+                label: Semester
+                type: select
+                options:
+                  - Semester 1
+                  - Semester 2
+
+              - name: learning_outcomes
+                label: Learning Outcomes
+                type: list
+                field:
+                  { name: outcome, label: Outcome, type: text }
+
+              - name: themes
+                label: Themes
+                type: multiselect
+                options:
+                  - Clinical Skills
+                  - Professionalism
+                  - Mental Health
+                  - Digital Capability
+                  - Patient Safety
+
+              - name: domains
+                label: NMC Domains
+                type: multiselect
+                options:
+                  - Knowledge for Practice
+                  - Person-Centred Care
+                  - Leadership
+
+              - { name: notes, label: Notes, type: text, required: false }
+
+      - name: year2
+        label: Year 2 Modules
+        file: data/year2.yml
+        fields:
+          - name: modules
+            label: Modules
+            type: list
+            fields:
+              - { name: module_name, label: Module name, type: string }
+              - name: semester
+                label: Semester
+                type: select
+                options: [Semester 1, Semester 2]
+
+              - name: learning_outcomes
+                label: Learning Outcomes
+                type: list
+                field:
+                  { name: outcome, label: Outcome, type: text }
+
+              - name: themes
+                label: Themes
+                type: multiselect
+                options:
+                  - Clinical Skills
+                  - Professionalism
+                  - Mental Health
+                  - Digital Capability
+                  - Patient Safety
+
+              - name: domains
+                label: NMC Domains
+                type: multiselect
+                options:
+                  - Knowledge for Practice
+                  - Person-Centred Care
+                  - Leadership
+
+      - name: year3
+        label: Year 3 Modules
+        file: data/year3.yml
+        fields:
+          - name: modules
+            label: Modules
+            type: list
+            fields:
+              - { name: module_name, label: Module name, type: string }
+              - name: semester
+                label: Semester
+                type: select
+                options: [Semester 1, Semester 2]
+
+              - name: learning_outcomes
+                label: Learning Outcomes
+                type: list
+                field:
+                  { name: outcome, label: Outcome, type: text }
+
+              - name: themes
+                label: Themes
+                type: multiselect
+                options:
+                  - Clinical Skills
+                  - Professionalism
+                  - Mental Health
+                  - Digital Capability
+                  - Patient Safety
+
+              - name: domains
+                label: NMC Domains
+                type: multiselect
+                options:
+                  - Knowledge for Practice
+                  - Person-Centred Care
+                  - Leadership
+``
