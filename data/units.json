@@ -14,7 +14,7 @@
     "assessments": [
       {
         "type": "Collaborative presentation",
-        "length": "15–18 mins",
+        "length": "15\u201318 mins",
         "summative": true,
         "weight": 100,
         "assesses_outcomes": [
@@ -2038,78 +2038,26 @@
       {
         "text": "Understand leadership, management, team dynamics, performance management, roles in the interdisciplinary team, health and social care policy, health economics, and the challenges of complex care and co-morbidities",
         "category": "Knowledge and Understanding",
-        "nmc": [
-          "5.1",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.12",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.11",
-          "6.12",
-          "7.2",
-          "7.3",
-          "7.4",
-          "7.5",
-          "7.6",
-          "7.7",
-          "7.8",
-          "7.9",
-          "7.10"
-        ],
-        "po": [
-          "A6",
-          "A7"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
         "category": "Intellectual Skills",
-        "nmc": [
-          "5.9",
-          "7.13"
-        ],
-        "po": [
-          "A1",
-          "B5"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
         "category": "Practical Skills",
-        "nmc": [
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.10",
-          "5.11",
-          "6.4",
-          "6.5",
-          "6.6",
-          "6.7",
-          "6.8",
-          "6.9",
-          "6.10",
-          "7.11"
-        ],
-        "po": [
-          "A6"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Use digital technologies effectively; apply partnership and interagency working; understand business case processes for care funding",
         "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "7.1",
-          "7.12"
-        ],
-        "po": [
-          "A1",
-          "D6"
-        ]
+        "nmc": [],
+        "po": []
       }
     ]
   },
@@ -2143,80 +2091,26 @@
       {
         "text": "Understand leadership, management, team dynamics, performance management, roles in the interdisciplinary team, health and social care policy, health economics, and the challenges of complex care and co-morbidities",
         "category": "Knowledge and Understanding",
-        "nmc": [
-          "5.1",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.12",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.11",
-          "6.12",
-          "7.2",
-          "7.3",
-          "7.4",
-          "7.5",
-          "7.6",
-          "7.7",
-          "7.8",
-          "7.9",
-          "7.10"
-        ],
-        "po": [
-          "A6",
-          "A7"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
         "category": "Intellectual Skills",
-        "nmc": [
-          "5.9",
-          "7.13"
-        ],
-        "po": [
-          "A1",
-          "B5"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
         "category": "Practical Skills",
-        "nmc": [
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.10",
-          "6.4",
-          "6.5",
-          "6.6",
-          "6.7",
-          "6.8",
-          "6.9",
-          "6.10",
-          "7.11"
-        ],
-        "po": [
-          "B1",
-          "B5"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Use digital technologies effectively; apply partnership and interagency working; demonstrate professional accountability and commitment to continuous improvement",
         "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "5.11",
-          "7.1",
-          "7.12"
-        ],
-        "po": [
-          "C1",
-          "C4",
-          "C6"
-        ]
+        "nmc": [],
+        "po": []
       }
     ]
   },
@@ -2250,80 +2144,26 @@
       {
         "text": "Understand leadership, management, team dynamics, performance management, roles in the interdisciplinary team, health and social care policy, health economics, and the challenges of complex care and co-morbidities",
         "category": "Knowledge and Understanding",
-        "nmc": [
-          "5.1",
-          "5.2",
-          "5.3",
-          "5.4",
-          "5.12",
-          "6.1",
-          "6.2",
-          "6.3",
-          "6.11",
-          "6.12",
-          "7.2",
-          "7.3",
-          "7.4",
-          "7.5",
-          "7.6",
-          "7.7",
-          "7.8",
-          "7.9",
-          "7.10"
-        ],
-        "po": [
-          "A6",
-          "A7"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Provide constructive feedback to colleagues; demonstrate political awareness to maximise nursing's influence on quality and patient safety",
         "category": "Intellectual Skills",
-        "nmc": [
-          "5.9",
-          "7.13"
-        ],
-        "po": [
-          "B1",
-          "B5"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Lead and manage nursing care; exhibit leadership potential; monitor quality of care by others; supervise students; contribute to team reflection; undertake risk assessments; apply quality improvement; manage and report incidents; develop improvement strategies",
         "category": "Practical Skills",
-        "nmc": [
-          "5.5",
-          "5.6",
-          "5.7",
-          "5.8",
-          "5.10",
-          "6.4",
-          "6.5",
-          "6.6",
-          "6.7",
-          "6.8",
-          "6.9",
-          "6.10",
-          "7.11"
-        ],
-        "po": [
-          "C1",
-          "C4",
-          "C6"
-        ]
+        "nmc": [],
+        "po": []
       },
       {
         "text": "Use digital technologies effectively; apply partnership and interagency working; demonstrate professional accountability and commitment to continuous improvement",
         "category": "Transferable Skills and Personal Qualities",
-        "nmc": [
-          "5.11",
-          "7.1",
-          "7.12"
-        ],
-        "po": [
-          "B7",
-          "D7"
-        ]
+        "nmc": [],
+        "po": []
       }
     ]
   },
@@ -2631,7 +2471,7 @@
     "discovery": false,
     "assessments": [
       {
-        "type": "SafeMedicate (injectable medicines — advanced skills)",
+        "type": "SafeMedicate (injectable medicines \u2014 advanced skills)",
         "length": "1 hour",
         "summative": true,
         "pass_fail": true,
