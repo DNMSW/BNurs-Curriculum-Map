@@ -1082,17 +1082,21 @@
           0,
           1,
           2,
-          3
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
         ]
       }
     ],
     "outcomes": [
       {
-        "text": "Demonstrate knowledge and understanding of dementia, its impact on individuals, families and carers, and the legal, ethical and governance frameworks underpinning dementia care",
+        "text": "Critically evaluate, from a person-centred perspective, the biopsychosocial factors that can influence well-being and lived experience of people with dementia, and how creative person-centred and arts-based approaches can inform assessment and care",
         "category": "Knowledge and Understanding",
         "nmc": [
-          "1.2",
-          "1.11",
           "1.12",
           "1.13",
           "1.14",
@@ -1102,26 +1106,48 @@
           "4.10"
         ],
         "po": [
+          "A1",
           "A2",
-          "A9"
+          "A9",
+          "C1"
         ]
       },
       {
-        "text": "Critically evaluate creative and empowering approaches to dementia care within the evidence base",
+        "text": "Consider best-practice in communication including some of the ethical challenges in communicating with people with different perceptions of reality",
+        "category": "Knowledge and Understanding",
+        "nmc": [
+          "1.2",
+          "1.11",
+          "1.12",
+          "1.13",
+          "1.14"
+        ],
+        "po": [
+          "C2",
+          "D2"
+        ]
+      },
+      {
+        "text": "Understand the significance of family, carers and social networks in planning and providing care and the importance of partnership working",
         "category": "Intellectual Skills",
         "nmc": [
-          "1.7",
-          "1.8",
-          "1.9",
           "1.12",
           "1.13",
           "1.14",
-          "2.1",
-          "3.1",
-          "3.2",
-          "3.3",
-          "3.4",
-          "4.8"
+          "2.1"
+        ],
+        "po": [
+          "B7",
+          "D6"
+        ]
+      },
+      {
+        "text": "Critically apply a range of evidence including first person accounts of living with dementia, person centred theory and research to inform an understanding of the lived experiences of a person(s) with dementia",
+        "category": "Intellectual Skills",
+        "nmc": [
+          "1.9",
+          "1.12",
+          "1.14"
         ],
         "po": [
           "B1",
@@ -1129,25 +1155,83 @@
         ]
       },
       {
-        "text": "Demonstrate the knowledge and skills to provide person-centred, creative and compassionate care for people living with dementia",
+        "text": "Critically apply a range of evidence including lived experiences, person centred theory and research to inform the holistic assessment of needs and care planning",
+        "category": "Intellectual Skills",
+        "nmc": [
+          "1.7",
+          "1.8",
+          "1.12",
+          "1.14",
+          "3.1",
+          "3.2",
+          "3.3",
+          "3.4",
+          "4.8"
+        ],
+        "po": [
+          "A9",
+          "B1",
+          "B2"
+        ]
+      },
+      {
+        "text": "Engage in partnership working via discussion, debate and shared learning",
         "category": "Practical Skills",
         "nmc": [
           "1.13"
         ],
         "po": [
-          "C1",
-          "C2"
+          "B7",
+          "D6"
         ]
       },
       {
-        "text": "Demonstrate empathy, cultural competence and advocacy in dementia care",
-        "category": "Transferable Skills and Personal Qualities",
-        "nmc": [],
-        "po": [
-          "B7",
-          "D8"
+        "text": "Communicate effectively and sensitively (verbal, non-verbal, written)",
+        "category": "Practical Skills",
+        "nmc": [
+          "1.11",
+          "1.13",
+          "AnnexeA"
         ],
-        "flag_missing_nmc": true
+        "po": [
+          "C2",
+          "D2"
+        ]
+      },
+      {
+        "text": "Develop and utilise IT skills",
+        "category": "Transferable Skills and Personal Qualities",
+        "nmc": [
+          "1.20"
+        ],
+        "po": [
+          "D3"
+        ]
+      },
+      {
+        "text": "Demonstrate research and enquiry skills by accessing literature in order to inform practice",
+        "category": "Transferable Skills and Personal Qualities",
+        "nmc": [
+          "1.7",
+          "1.8",
+          "1.9"
+        ],
+        "po": [
+          "B1",
+          "B3"
+        ]
+      },
+      {
+        "text": "Reflect on and utilise strategies to develop practice",
+        "category": "Transferable Skills and Personal Qualities",
+        "nmc": [
+          "1.17",
+          "6.8"
+        ],
+        "po": [
+          "B6",
+          "D7"
+        ]
       }
     ]
   },
