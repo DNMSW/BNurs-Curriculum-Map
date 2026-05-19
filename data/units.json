@@ -1072,6 +1072,7 @@
       "MH"
     ],
     "discovery": true,
+    "note": "This unit focuses on person-centred, creative and empowering approaches to supporting people living with dementia and their carers/supporters.",
     "assessments": [
       {
         "type": "Essay",
@@ -1082,24 +1083,42 @@
           0,
           1,
           2,
-          3
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
         ]
       }
     ],
     "outcomes": [
       {
-        "text": "Demonstrate knowledge and understanding of dementia, its impact on individuals, families and carers, and the legal, ethical and governance frameworks underpinning dementia care",
+        "text": "Critically evaluate, from a person-centred perspective, the biopsychosocial factors that can influence well-being and lived experience of people with dementia",
         "category": "Knowledge and Understanding",
         "nmc": [
-          "1.2",
-          "1.11",
           "1.12",
           "1.13",
           "1.14",
+          "4.10"
+        ],
+        "po": [
+          "A3",
+          "A9"
+        ]
+      },
+      {
+        "text": "Understand how a creative, person centred perspective can inform the assessment and care of people living with dementia",
+        "category": "Knowledge and Understanding",
+        "nmc": [
+          "1.12",
+          "1.14",
           "3.1",
           "3.2",
-          "3.3",
-          "4.10"
+          "3.3"
         ],
         "po": [
           "A2",
@@ -1107,16 +1126,67 @@
         ]
       },
       {
-        "text": "Critically evaluate creative and empowering approaches to dementia care within the evidence base",
+        "text": "Consider the application of a range of arts-based approaches that may promote well-being",
+        "category": "Knowledge and Understanding",
+        "nmc": [
+          "1.12",
+          "1.14"
+        ],
+        "po": [
+          "A3",
+          "A9"
+        ]
+      },
+      {
+        "text": "Consider best-practice in communication including some of the ethical challenges in communicating with people with different perceptions of reality",
+        "category": "Knowledge and Understanding",
+        "nmc": [
+          "1.2",
+          "1.11",
+          "1.12",
+          "1.13",
+          "1.14"
+        ],
+        "po": [
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "text": "Understand the significance of family, carers and social networks in planning and providing care and the importance of partnership working",
+        "category": "Intellectual Skills",
+        "nmc": [
+          "1.12",
+          "1.13",
+          "1.14",
+          "2.1"
+        ],
+        "po": [
+          "B2",
+          "B7"
+        ]
+      },
+      {
+        "text": "Critically apply a range of evidence including first person accounts of living with dementia, person centred theory and research to inform an understanding of the lived experiences of a person(s) with dementia",
+        "category": "Intellectual Skills",
+        "nmc": [
+          "1.9",
+          "1.12",
+          "1.14"
+        ],
+        "po": [
+          "B1",
+          "B3"
+        ]
+      },
+      {
+        "text": "Critically apply a range of evidence including lived experiences, person centred theory and research to inform the holistic assessment of needs and care planning",
         "category": "Intellectual Skills",
         "nmc": [
           "1.7",
           "1.8",
-          "1.9",
           "1.12",
-          "1.13",
           "1.14",
-          "2.1",
           "3.1",
           "3.2",
           "3.3",
@@ -1125,29 +1195,53 @@
         ],
         "po": [
           "B1",
+          "B2",
           "B3"
         ]
       },
       {
-        "text": "Demonstrate the knowledge and skills to provide person-centred, creative and compassionate care for people living with dementia",
+        "text": "Engage in partnership working via discussion, debate and shared learning",
         "category": "Practical Skills",
         "nmc": [
           "1.13"
         ],
         "po": [
           "C1",
-          "C2"
+          "C6"
         ]
       },
       {
-        "text": "Demonstrate empathy, cultural competence and advocacy in dementia care",
+        "text": "Communicate effectively and sensitively (verbal, non-verbal, written)",
+        "category": "Practical Skills",
+        "nmc": [],
+        "po": [
+          "C2",
+          "D4"
+        ]
+      },
+      {
+        "text": "Develop and utilise IT skills",
         "category": "Transferable Skills and Personal Qualities",
         "nmc": [],
         "po": [
-          "B7",
-          "D8"
-        ],
-        "flag_missing_nmc": true
+          "D3"
+        ]
+      },
+      {
+        "text": "Demonstrate research and enquiry skills by accessing literature in order to inform practice",
+        "category": "Transferable Skills and Personal Qualities",
+        "nmc": [],
+        "po": [
+          "D1"
+        ]
+      },
+      {
+        "text": "Reflect on and utilise strategies to develop practice",
+        "category": "Transferable Skills and Personal Qualities",
+        "nmc": [],
+        "po": [
+          "D7"
+        ]
       }
     ]
   },
