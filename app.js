@@ -3,6 +3,8 @@ let currentView = 'nmc';
 let previousView = null;
 let selectedUnit = null;
 let filters = { pathway: 'bnurs', year: 'all', field: 'all', search: '' };
+const placementUnitCodes = ['NURS31311', 'NURS31312', 'NURS31322', 'NURS41010'];
+const placementMappingMessage = 'Clinical placement units are PARE-mapped only and are excluded from NMC and programme outcome mapping requirements.';
 
 async function loadData() {
   try {
@@ -90,11 +92,10 @@ function getFilteredUnits() {
 }
 
 function getPlacementUnits() {
-  const placementCodes = ['NURS31311', 'NURS31312', 'NURS31322', 'NURS41010'];
   const pathwayConfig = pathways[filters.pathway];
   
   return units.filter(u => {
-    if (!placementCodes.includes(u.code)) return false;
+    if (!placementUnitCodes.includes(u.code)) return false;
     if (filters.pathway === 'bnurs' && pathwayConfig.excludeUnits.includes(u.code)) return false;
     return true;
   });
@@ -102,7 +103,12 @@ function getPlacementUnits() {
 
 function ycls(year) { return ["", "y1", "y2", "y3", "y4"][year] || ''; }
 
-function outcomeFlags(o) {
+function isPlacementUnit(u) {
+  return !!u && placementUnitCodes.includes(u.code);
+}
+
+function outcomeFlags(o, u) {
+  if (isPlacementUnit(u)) return '';
   const flags = [];
   if (o.flag_missing_nmc) flags.push('<span class="outcome-flag flag-nmc" title="No NMC standard mapping — requires explicit mapping">&#9888; No NMC mapping</span>');
   if (!(o.po || []).length) flags.push('<span class="outcome-flag flag-po" title="No programme outcome mapping — requires explicit mapping">&#9888; No PO mapping</span>');
@@ -133,6 +139,15 @@ function unitInfoGrid(u) {
   </div>`;
 }
 
+function placementUnitNote() {
+  return '<p class="placement-note">Clinical placement unit: PARE mapping required; NMC and PO mapping not required.</p>';
+}
+
+function renderPlacementMappingNote(codes = null) {
+  const suffix = codes ? ` Units in this view: ${codes}.` : '';
+  return `<div class="assess-note">${placementMappingMessage}${suffix}</div>`;
+}
+
 /* ── Render dispatcher ────────────────────────────────── */
 function render() {
   const c = document.getElementById('content');
@@ -148,14 +163,16 @@ function render() {
 
 /* ── NMC Standards view ───────────────────────────────── */
 function renderNMC(c, fu) {
+  const mappedUnits = fu.filter(u => !isPlacementUnit(u));
+  const placementUnits = fu.filter(isPlacementUnit);
   const cov = {};
-  fu.forEach(u => u.outcomes.forEach(o => (o.nmc || []).forEach(ref => {
+  mappedUnits.forEach(u => u.outcomes.forEach(o => (o.nmc || []).forEach(ref => {
     if (!cov[ref]) cov[ref] = [];
     if (!cov[ref].find(x => x.code === u.code)) cov[ref].push(u);
   })));
 
   const assessedCov = {};
-  fu.forEach(u => {
+  mappedUnits.forEach(u => {
     const idx = new Set();
     (u.assessments || []).forEach(a => (a.assesses_outcomes || []).forEach(i => idx.add(i)));
     u.outcomes.forEach((o, i) => {
@@ -179,8 +196,11 @@ function renderNMC(c, fu) {
     <div class="stat covered"><div class="stat-num">${covered}</div><div class="stat-label">Covered</div></div>
     <div class="stat assessed"><div class="stat-num">${assessedCount}</div><div class="stat-label">Summatively Assessed</div></div>
     <div class="stat gap"><div class="stat-num">${total - covered}</div><div class="stat-label">Gaps</div></div>
-    <div class="stat"><div class="stat-num">${fu.length}</div><div class="stat-label">Units shown</div></div>
+    <div class="stat"><div class="stat-num">${mappedUnits.length}</div><div class="stat-label">Units shown</div></div>
   </div>`;
+  if (placementUnits.length) {
+    html += renderPlacementMappingNote(placementUnits.map(u => u.code).join(', '));
+  }
 
   const platforms = [...new Set(mainStds.map(s => s.platform))].sort((a, b) => a - b);
   platforms.forEach(p => {
@@ -226,14 +246,16 @@ function renderNMC(c, fu) {
 
 /* ── Programme Outcomes view ──────────────────────────── */
 function renderProgramme(c, fu) {
+  const mappedUnits = fu.filter(u => !isPlacementUnit(u));
+  const placementUnits = fu.filter(isPlacementUnit);
   const cov = {};
-  fu.forEach(u => u.outcomes.forEach(o => (o.po || []).forEach(ref => {
+  mappedUnits.forEach(u => u.outcomes.forEach(o => (o.po || []).forEach(ref => {
     if (!cov[ref]) cov[ref] = [];
     if (!cov[ref].find(x => x.code === u.code)) cov[ref].push(u);
   })));
 
   const assessedCov = {};
-  fu.forEach(u => {
+  mappedUnits.forEach(u => {
     const idx = new Set();
     (u.assessments || []).forEach(a => (a.assesses_outcomes || []).forEach(i => idx.add(i)));
     u.outcomes.forEach((o, i) => {
@@ -253,8 +275,11 @@ function renderProgramme(c, fu) {
     <div class="stat covered"><div class="stat-num">${covered}</div><div class="stat-label">Covered</div></div>
     <div class="stat assessed"><div class="stat-num">${assessedCount}</div><div class="stat-label">Summatively Assessed</div></div>
     <div class="stat gap"><div class="stat-num">${programme.length - covered}</div><div class="stat-label">Gaps</div></div>
-    <div class="stat"><div class="stat-num">${fu.length}</div><div class="stat-label">Units shown</div></div>
+    <div class="stat"><div class="stat-num">${mappedUnits.length}</div><div class="stat-label">Units shown</div></div>
   </div>`;
+  if (placementUnits.length) {
+    html += renderPlacementMappingNote(placementUnits.map(u => u.code).join(', '));
+  }
 
   const cats = [...new Set(programme.map(p => p.category))];
   cats.forEach(cat => {
@@ -305,14 +330,15 @@ function renderUnits(c, fu) {
         </div>
         <div class="unit-card-body">
           ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
+          ${isPlacementUnit(u) ? placementUnitNote() : ''}
           ${u.outcomes.map(o => {
-            const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
-            const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+            const nmcRefs = isPlacementUnit(u) ? '' : (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
+            const poRefs  = isPlacementUnit(u) ? '' : (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
             const pareRefs = (o.pare || []).map(p => `<span class="pare-ref ref-link" onclick="showRefPopup('${p}','pare')">${p}</span>`).join('');
-            return `<div class="outcome-item${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
+            return `<div class="outcome-item${o.flag_missing_nmc && !isPlacementUnit(u) ? ' outcome-flagged' : ''}">
               <div class="outcome-cat">${o.category}</div>
               <div class="outcome-text">${o.text}</div>
-              ${outcomeFlags(o)}
+              ${outcomeFlags(o, u)}
               ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
               ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>`  : ''}
               ${pareRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PARE</span>${pareRefs}</div>`  : ''}
@@ -351,6 +377,7 @@ function renderPARE(c) {
     <div class="stat gap"><div class="stat-num">${total - covered}</div><div class="stat-label">Gaps</div></div>
     <div class="stat"><div class="stat-num">${placementUnits.length}</div><div class="stat-label">Placement units shown</div></div>
   </div>`;
+  html += renderPlacementMappingNote();
 
   const categories = [...new Set(pare.map(p => p.category))];
   categories.forEach(cat => {
@@ -375,9 +402,10 @@ function renderPARE(c) {
 
 /* ── Coverage Gaps view ───────────────────────────────── */
 function renderGaps(c, fu) {
+  const mappedUnits = fu.filter(u => !isPlacementUnit(u));
   const nmcCov = new Set();
   const poCov  = new Set();
-  fu.forEach(u => u.outcomes.forEach(o => {
+  mappedUnits.forEach(u => u.outcomes.forEach(o => {
     (o.nmc || []).forEach(n => nmcCov.add(n));
     (o.po  || []).forEach(p => poCov.add(p));
   }));
@@ -389,7 +417,7 @@ function renderGaps(c, fu) {
     <div class="stat gap"><div class="stat-num">${nmcGaps.length}</div><div class="stat-label">NMC Gaps</div></div>
     <div class="stat gap"><div class="stat-num">${poGaps.length}</div><div class="stat-label">Programme Outcome Gaps</div></div>
     <div class="stat covered"><div class="stat-num">${nmc.length - nmcGaps.length}</div><div class="stat-label">NMC Covered</div></div>
-    <div class="stat"><div class="stat-num">${fu.length}</div><div class="stat-label">Units in view</div></div>
+    <div class="stat"><div class="stat-num">${mappedUnits.length}</div><div class="stat-label">Units in view</div></div>
   </div>`;
 
   if (nmcGaps.length === 0 && poGaps.length === 0) {
@@ -493,15 +521,15 @@ function renderAssessments(c, fu) {
 
       u.outcomes.forEach((o, i) => {
         const isAssessed = assessedIdx.has(i);
-        const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
-        const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+        const nmcRefs = isPlacementUnit(u) ? '' : (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
+        const poRefs  = isPlacementUnit(u) ? '' : (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
         const pareRefs = (o.pare || []).map(p => `<span class="pare-ref ref-link" onclick="showRefPopup('${p}','pare')">${p}</span>`).join('');
-        html += `<div class="outcome-item ${isAssessed ? 'assessed-outcome' : 'taught-outcome'}${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
+        html += `<div class="outcome-item ${isAssessed ? 'assessed-outcome' : 'taught-outcome'}${o.flag_missing_nmc && !isPlacementUnit(u) ? ' outcome-flagged' : ''}">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}
             <span class="outcome-status-tag ${isAssessed ? 'assessed-tag' : 'taught-tag'}">${isAssessed ? 'Summatively assessed' : 'Taught / formative'}</span>
           </div>
-          ${outcomeFlags(o)}
+          ${outcomeFlags(o, u)}
           ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
           ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
           ${pareRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PARE</span>${pareRefs}</div>` : ''}
@@ -541,14 +569,15 @@ function renderUnitDetail(c) {
     </div>
     <div class="unit-card-body">
       ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
+      ${isPlacementUnit(u) ? placementUnitNote() : ''}
       ${u.outcomes.map(o => {
-        const nmcRefs = (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
-        const poRefs  = (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
+        const nmcRefs = isPlacementUnit(u) ? '' : (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
+        const poRefs  = isPlacementUnit(u) ? '' : (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
         const pareRefs = (o.pare || []).map(p => `<span class="pare-ref ref-link" onclick="showRefPopup('${p}','pare')">${p}</span>`).join('');
-        return `<div class="outcome-item${o.flag_missing_nmc ? ' outcome-flagged' : ''}">
+        return `<div class="outcome-item${o.flag_missing_nmc && !isPlacementUnit(u) ? ' outcome-flagged' : ''}">
           <div class="outcome-cat">${o.category}</div>
           <div class="outcome-text">${o.text}</div>
-          ${outcomeFlags(o)}
+          ${outcomeFlags(o, u)}
           ${nmcRefs ? `<div class="nmc-ref-row"><span class="ref-label">NMC</span>${nmcRefs}</div>` : ''}
           ${poRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PO</span>${poRefs}</div>` : ''}
           ${pareRefs  ? `<div class="nmc-ref-row" style="margin-top:0.2rem"><span class="ref-label">PARE</span>${pareRefs}</div>` : ''}

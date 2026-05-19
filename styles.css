@@ -291,6 +291,14 @@ main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
 .unit-info-discovery { color: var(--purple); }
 
 .unit-card-body { padding: 0.9rem 1.1rem; }
+.placement-note {
+  font-size: 0.8rem;
+  color: #0f5132;
+  background: #d1e7dd;
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.6rem;
+}
 .outcome-item { padding: 0.45rem 0; border-bottom: 1px solid #f0f0f2; }
 .outcome-item:last-of-type { border-bottom: none; }
 .outcome-cat {
