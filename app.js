@@ -4,6 +4,7 @@ let previousView = null;
 let selectedUnit = null;
 let filters = { pathway: 'bnurs', year: 'all', field: 'all', search: '' };
 const placementUnitCodes = ['NURS31311', 'NURS31312', 'NURS31322', 'NURS41010'];
+const placementMappingMessage = 'Clinical placement units are PARE-mapped only and are excluded from NMC and programme outcome mapping requirements.';
 
 async function loadData() {
   try {
@@ -138,6 +139,15 @@ function unitInfoGrid(u) {
   </div>`;
 }
 
+function placementUnitNote() {
+  return '<p class="placement-note">Clinical placement unit: PARE mapping required; NMC and PO mapping not required.</p>';
+}
+
+function renderPlacementMappingNote(codes = null) {
+  const suffix = codes ? ` Units in this view: ${codes}.` : '';
+  return `<div class="assess-note">${placementMappingMessage}${suffix}</div>`;
+}
+
 /* ── Render dispatcher ────────────────────────────────── */
 function render() {
   const c = document.getElementById('content');
@@ -189,7 +199,7 @@ function renderNMC(c, fu) {
     <div class="stat"><div class="stat-num">${mappedUnits.length}</div><div class="stat-label">Units shown</div></div>
   </div>`;
   if (placementUnits.length) {
-    html += `<div class="assess-note">Clinical placement units (${placementUnits.map(u => u.code).join(', ')}) are PARE-mapped only and are excluded from NMC mapping requirements.</div>`;
+    html += renderPlacementMappingNote(placementUnits.map(u => u.code).join(', '));
   }
 
   const platforms = [...new Set(mainStds.map(s => s.platform))].sort((a, b) => a - b);
@@ -268,7 +278,7 @@ function renderProgramme(c, fu) {
     <div class="stat"><div class="stat-num">${mappedUnits.length}</div><div class="stat-label">Units shown</div></div>
   </div>`;
   if (placementUnits.length) {
-    html += `<div class="assess-note">Clinical placement units (${placementUnits.map(u => u.code).join(', ')}) are PARE-mapped only and are excluded from programme outcome mapping requirements.</div>`;
+    html += renderPlacementMappingNote(placementUnits.map(u => u.code).join(', '));
   }
 
   const cats = [...new Set(programme.map(p => p.category))];
@@ -320,7 +330,7 @@ function renderUnits(c, fu) {
         </div>
         <div class="unit-card-body">
           ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
-          ${isPlacementUnit(u) ? `<p style="font-size:0.8rem;color:#0f5132;background:#d1e7dd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">Clinical placement unit: PARE mapping required; NMC and PO mapping not required.</p>` : ''}
+          ${isPlacementUnit(u) ? placementUnitNote() : ''}
           ${u.outcomes.map(o => {
             const nmcRefs = isPlacementUnit(u) ? '' : (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
             const poRefs  = isPlacementUnit(u) ? '' : (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
@@ -367,7 +377,7 @@ function renderPARE(c) {
     <div class="stat gap"><div class="stat-num">${total - covered}</div><div class="stat-label">Gaps</div></div>
     <div class="stat"><div class="stat-num">${placementUnits.length}</div><div class="stat-label">Placement units shown</div></div>
   </div>`;
-  html += '<div class="assess-note">Clinical placement units are mapped to PARE proficiencies only (NMC and programme outcome mapping is not required).</div>';
+  html += renderPlacementMappingNote();
 
   const categories = [...new Set(pare.map(p => p.category))];
   categories.forEach(cat => {
@@ -559,7 +569,7 @@ function renderUnitDetail(c) {
     </div>
     <div class="unit-card-body">
       ${u.note ? `<p style="font-size:0.8rem;color:#7a5200;background:#fff3cd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">${u.note}</p>` : ''}
-      ${isPlacementUnit(u) ? `<p style="font-size:0.8rem;color:#0f5132;background:#d1e7dd;border-radius:4px;padding:0.4rem 0.6rem;margin-bottom:0.6rem">Clinical placement unit: PARE mapping required; NMC and PO mapping not required.</p>` : ''}
+      ${isPlacementUnit(u) ? placementUnitNote() : ''}
       ${u.outcomes.map(o => {
         const nmcRefs = isPlacementUnit(u) ? '' : (o.nmc || []).map(n => `<span class="nmc-ref ref-link" onclick="showRefPopup('${n}','nmc')">${n}</span>`).join('');
         const poRefs  = isPlacementUnit(u) ? '' : (o.po  || []).map(p => `<span class="po-ref ref-link" onclick="showRefPopup('${p}','po')">${p}</span>`).join('');
