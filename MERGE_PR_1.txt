@@ -1,0 +1,17 @@
+Merging PR #1: Make clinical placement units PARE-only
+
+This file marks the successful merge of PR #1 which implements:
+- Removes NMC and PO mapping requirements from all clinical placement units (NURS31311, NURS31312, NURS31322, NURS41010)
+- Units now treated as PARE-only
+- UI updated to hide NMC/PO reference badges for placement units
+- Placement units excluded from NMC/PO coverage calculations
+
+Changes include:
+- app.js: Added placement-unit detection and outcome flag suppression
+- data/units.json: Cleared NMC and PO arrays for all placement unit outcomes
+- index.html: Updated search placeholder text
+- styles.css: Added placement-note styling
+
+Merged on: 2026-05-19
+Author: Copilot coding agent
+Assignees: Copilot, LauraIraineGreen
